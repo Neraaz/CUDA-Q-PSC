@@ -1,0 +1,4 @@
++ ./a.out
+./a.out: error while loading shared libraries: libimf.so: cannot open shared object file: No such file or directory
++ ./new
+./new: error while loading shared libraries: libimf.so: cannot open shared object file: No such file or directory

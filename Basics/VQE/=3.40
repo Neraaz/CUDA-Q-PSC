@@ -1,0 +1,35 @@
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /ocean/projects/pscstaff/nnepal/conda/envs/cudaq-env
+
+  added / updated specs:
+    - sqlite
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    libsqlite-3.49.1           |       hee588c1_2         897 KB  conda-forge
+    ncurses-6.5                |       h2d0b736_3         871 KB  conda-forge
+    sqlite-3.49.1              |       h9eae976_2         839 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:         2.5 MB
+
+The following packages will be UPDATED:
+
+  libsqlite                               3.48.0-hee588c1_1 --> 3.49.1-hee588c1_2 
+  ncurses                 pkgs/main::ncurses-6.4-h6a678d5_0 --> conda-forge::ncurses-6.5-h2d0b736_3 
+  sqlite                                  3.32.3-hcee41ef_1 --> 3.49.1-h9eae976_2 
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages: ...working...
