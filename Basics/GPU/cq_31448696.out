@@ -1,0 +1,11 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/GPU/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/GPU/singularity_cache
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --nv --cleanenv --no-home /ocean/projects/pscstaff/nnepal/containers/cuda-quantum.sif python3 parh.py
+/usr/bin/python3: can't open file '/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/GPU/parh.py': [Errno 2] No such file or directory
+real 1.19
+user 0.13
+sys 0.07
