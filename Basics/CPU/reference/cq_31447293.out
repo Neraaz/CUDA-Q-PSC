@@ -1,0 +1,12 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --no-home /ocean/projects/pscstaff/nnepal/containers/cuda-quantum.sif python3 ghz.py
+Preparing GHZ state for 28 qubits.
+{ 0000000000000000000000000000:528 1111111111111111111111111111:472 }
+real 75.69
+user 4203.08
+sys 18.88

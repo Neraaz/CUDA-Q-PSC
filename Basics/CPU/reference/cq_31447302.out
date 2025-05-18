@@ -1,0 +1,13 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --no-home /ocean/projects/pscstaff/nnepal/containers/cuda-quantum.sif python3 practice.py
+Running on target qpp-cpu
+{ 00:486 11:514 }
+
+real 6.76
+user 16.93
+sys 7.65

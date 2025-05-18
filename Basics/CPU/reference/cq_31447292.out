@@ -1,0 +1,20 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --no-home /ocean/projects/pscstaff/nnepal/containers/cuda-quantum.sif python3 custom_gate.py
+{ 00:495 11:505 }
+
+     ╭───╮╭──────────╮            
+q0 : ┤ h ├┤ custom_x ├─────●──────
+     ╰───╯╰──────────╯╭────┴─────╮
+q1 : ─────────────────┤ custom_x ├
+                      ╰──────────╯
+
+Measurement distribution:{ 00:495 11:505 }
+
+real 6.65
+user 18.02
+sys 7.67

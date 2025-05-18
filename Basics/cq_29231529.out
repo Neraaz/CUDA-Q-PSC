@@ -1,7 +1,0 @@
-+ conda activate cudaq-env
-
-CondaError: Run 'conda init' before 'conda activate'
-
-+ python3 2.py
-{ 101:1000 }
-

@@ -1,0 +1,22 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --no-home /ocean/projects/pscstaff/nnepal/containers/cuda-quantum.sif python3 control_qubit.py
+{ 101:1000 }
+
+     ╭───╮          
+q0 : ┤ x ├───────●──
+     ├───┤╭───╮  │  
+q1 : ┤ x ├┤ x ├──●──
+     ├───┤╰───╯╭─┴─╮
+q2 : ┤ x ├─────┤ x ├
+     ╰───╯     ╰───╯
+
+Measurement distribution:{ 101:1000 }
+
+real 6.66
+user 19.10
+sys 7.60

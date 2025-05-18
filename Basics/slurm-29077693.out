@@ -1,7 +1,0 @@
-+ python practice.py 6
-Running on target qpp-cpu
-{ 000000:498 111111:502 }
-
-real 106.64
-user 14.19
-sys 9.01

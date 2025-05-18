@@ -1,0 +1,235 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/GITHUB_/CUDA-Q-PSC/Basics/CPU/singularity_cache
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --no-home /ocean/projects/pscstaff/nnepal/containers/cuda-quantum.sif python3 target.py
+Target tensornet-mps
+	simulator=tensornet_mps
+	platform=default
+	description=cutensornet simulator backend target based on matrix product state representation
+	precision=fp64
+Supported Arguments:
+  - option (Specify the target options as a comma-separated list.
+Supported options are 'fp32', 'fp64')
+
+Target stim
+	simulator=stim
+	platform=default
+	description=Stim-based CPU-only backend target
+	precision=fp64
+
+Target quera
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for QuEra.
+	precision=fp32
+Supported Arguments:
+  - machine (Specify the QuEra QPU.)
+  - default_bucket (Specify a default S3 bucket for QuEra results.)
+
+Target pasqal
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for pasqal.
+	precision=fp32
+Supported Arguments:
+  - machine (Specify the Pasqal machine to target, FRESNEL to target QPU and EMU_MPS to run on a MPS emulator.)
+
+Target orca
+	simulator=qpp
+	platform=mqpu
+	description=CUDA-Q target for Orca.
+	precision=fp32
+Supported Arguments:
+  - url (Specify URL.)
+  - machine (Specify the Orca QPU.)
+
+Target nvqc
+	simulator=qpp
+	platform=mqpu
+	description=The NVQC Target provides access to simulated QPU services hosted on the NVIDIA Quantum Cloud.
+	precision=fp32
+Supported Arguments:
+  - backend (Specify the remote simulator backend.)
+  - nqpus (Specify the number of virtual NVQC QPUs.)
+  - ngpus (Specify the number of GPUs required.)
+  - function-id (Specify the NVQC function Id.)
+  - function-version-id (Specify the NVQC function version Id.)
+  - api-key (Specify NVQC API key.)
+
+Target nvidia-mqpu-fp64
+	simulator=cusvsim_fp64
+	platform=mqpu
+	description=The NVIDIA MQPU FP64 Target provides a simulated QPU for every available CUDA GPU on the underlying system. Each QPU is simulated via cuStateVec FP64.
+	precision=fp64
+
+Target tensornet
+	simulator=tensornet
+	platform=default
+	description=cutensornet simulator backend target based on full tensor network contraction
+	precision=fp64
+Supported Arguments:
+  - option (Specify the target options as a comma-separated list.
+Supported options are 'fp32', 'fp64')
+
+Target braket
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for Amazon Braket.
+	precision=fp32
+Supported Arguments:
+  - machine (Specify the Amazon Braket QPU.)
+  - default_bucket (Specify a default S3 bucket for Amazon Braket results.)
+  - polling_interval_ms (Specify the polling interval (in milliseconds) for checking task completion status on Amazon Braket.)
+  - noise-model (Specify the noise model for simulation.)
+
+Target oqc
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for Oxford Quantum Circuits.
+	precision=fp32
+Supported Arguments:
+  - email (Specify user's email address.)
+  - url (Specify the URL.)
+  - machine (Specify QPU.)
+
+Target ionq
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for IonQ.
+	precision=fp32
+Supported Arguments:
+  - machine (Specify the IonQ QPU.)
+  - noise-model (Specify the noise model for simulation.)
+  - debias (Specify debiasing.)
+  - sharpen (Specify sharpening.)
+
+Target density-matrix-cpu
+	simulator=dm
+	platform=default
+	description=The Density Matrix CPU Target provides a simulated QPU via OpenMP-enabled, CPU-only density matrix emulation.
+	precision=fp64
+
+Target fermioniq
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for Fermioniq.
+	precision=fp32
+Supported Arguments:
+  - remote-config (Specify the Fermioniq Remote Configuration.)
+  - project-id (Specify the project.)
+  - bond-dim (Specify bond-dimension. Applies to all circuits.)
+
+Target iqm
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for IQM.
+	precision=fp32
+Supported Arguments:
+  - server-url (Specify URL.)
+  - machine (Specify the IQM QPU.)
+
+Target quantinuum
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for Quantinuum.
+	precision=fp32
+Supported Arguments:
+  - url (Specify the URL.)
+  - machine (Specify QPU.)
+
+Target dynamics
+	simulator=dynamics
+	platform=mqpu
+	description=Dynamics simulation backend
+	precision=fp32
+
+Target nvidia-mgpu
+	simulator=nvidia_mgpu
+	platform=default
+	description=The NVIDIA Target provides a simulated QPU via multi-node multi-GPU cuStateVec integration.
+	precision=fp64
+
+Target remote-mqpu
+	simulator=qpp
+	platform=mqpu
+	description=The remote-mqpu target provides locally-hosted CUDA-Q simulator runtime services.
+	precision=fp32
+Supported Arguments:
+  - backend (Specify the remote simulator backend.)
+  - url (Specify the URL of the server.)
+  - auto-launch (Specify the number of server instances to be launched and shut down automatically.)
+
+Target qpp-cpu
+	simulator=qpp
+	platform=default
+	description=QPP-based CPU-only backend target
+	precision=fp64
+
+Target nvidia-mqpu
+	simulator=cusvsim_fp32
+	platform=mqpu
+	description=The NVIDIA MQPU Target provides a simulated QPU for every available CUDA GPU on the underlying system. Each QPU is simulated via cuStateVec FP32. This target enables asynchronous parallel execution of quantum kernel tasks.
+	precision=fp32
+
+Target nvidia
+	simulator=cusvsim_fp32
+	platform=default
+	description=The NVIDIA Target provides a simulated QPU via cuStateVec (state-vector simulation) integration.
+	precision=fp32
+Supported Arguments:
+  - option (Specify the target options as a comma-separated list.
+Supported options are 'fp32', 'fp64', 'mgpu', 'mqpu'.
+For example, the 'fp32,mgpu' option combination will activate multi-GPU distribution with single-precision. Not all option combinations are supported.)
+
+Target nvidia-fp64
+	simulator=cusvsim_fp64
+	platform=default
+	description=The NVIDIA FP64 Target provides a simulated QPU via single-GPU cuStateVec integration on FP64 types.
+	precision=fp64
+
+Target orca-photonics
+	simulator=qpp
+	platform=default
+	description=Photonics simulator
+	precision=fp32
+
+Target opt-test
+	simulator=cusvsim_fp32
+	platform=default
+	description=Compiler Optimization Test Target
+	precision=fp32
+Supported Arguments:
+  - option (Specify the target options as a comma-separated list.
+Supported options are 'dep-analysis, 'fp32', 'fp64', 'qpp'.
+For example, the 'dep-analysis,fp32' option combination will activate single-precision simulation with the dep-analysis passes. Not all option combinations are supported.)
+
+Target anyon
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for Anyon.
+	precision=fp32
+Supported Arguments:
+  - url (Specify the URL.)
+  - machine (Specify QPU.)
+
+Target infleqtion
+	simulator=qpp
+	platform=default
+	description=CUDA-Q target for Infleqtion.
+	precision=fp32
+Supported Arguments:
+  - machine (Specify the Infleqtion backend to run on.)
+  - method (Specify the circuit execution type, either: dry-run (ideal simulation) or noise-sim (noisy-simulation).)
+
+Target nvidia-mqpu-mps
+	simulator=tensornet_mps
+	platform=mqpu
+	description=The NVIDIA MQPU Target provides a simulated QPU for every available CUDA GPU on the underlying system. Each QPU is simulated via cuTensorNet MPS. This target enables asynchronous parallel execution of quantum kernel tasks.
+	precision=fp64
+
+real 6.50
+user 14.06
+sys 7.51

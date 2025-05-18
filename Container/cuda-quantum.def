@@ -1,0 +1,24 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/nightly/cuda-quantum:cu12-latest
+
+%post
+    # Install system dependencies
+    apt-get update && apt-get install -y python3-pip git
+
+    # Upgrade pip
+    pip3 install --upgrade pip
+
+    # Install Python packages
+    pip3 install pyscf
+    pip3 install contfrac
+    pip3 install ipython
+    pip3 install matplotlib
+    pip3 install openfermion
+    pip3 install openfermionpyscf
+
+
+%runscript
+    mount devpts /dev/pts -t devpts
+    cp -r /home/cudaq/* .
+    bash
+

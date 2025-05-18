@@ -1,5 +1,0 @@
-+ python practice.py
-Traceback (most recent call last):
-  File "/ocean/projects/pscstaff/nnepal/cudaq_practice/practice.py", line 2, in <module>
-    import cudaq
-ModuleNotFoundError: No module named 'cudaq'
