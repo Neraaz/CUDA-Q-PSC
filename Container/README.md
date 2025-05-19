@@ -60,7 +60,7 @@ The `.sif` file is self-contained. You can copy or move it to any folder, and it
 
 ## 5. Run a VQE Job
 
-To run a job using the container (e.g., computing the ground-state energy of NaH), submit a job script:
+To run a job using the container (e.g., computing the ground-state energy of H2 molecule), submit a job script:
 
 ```bash
 sbatch job.sh
