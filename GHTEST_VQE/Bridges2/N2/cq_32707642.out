@@ -1,0 +1,115 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/N2/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/N2/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/N2/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/N2/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/N2/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --nv --no-home --bind /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/N2/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif python3 vqe.py
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/N2/vqe.py:33: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+electrons: 14, qubit count: 20, parameters: 609
+Iteration 1:-85.55163848152324
+Iteration 2:-86.46229706989222
+Iteration 3:-85.6084963133539
+Iteration 4:-86.45523150642819
+Iteration 5:-87.004051221965
+Iteration 6:-87.53115760228617
+Iteration 7:-88.40953409073887
+Iteration 8:-88.9665890875306
+Iteration 9:-88.99797942806487
+Iteration 10:-89.09955202797863
+Iteration 11:-89.07729343984737
+Iteration 12:-88.69334929149623
+Iteration 13:-89.1366211173682
+Iteration 14:-88.85622126662223
+Iteration 15:-88.65408864064203
+Iteration 16:-89.12708429545646
+Iteration 17:-89.13549913158737
+Iteration 18:-89.43446424829692
+Iteration 19:-89.50246200754691
+Iteration 20:-89.02587298422601
+Iteration 21:-90.01395337501555
+Iteration 22:-90.52489034443965
+Iteration 23:-90.5291706236213
+Iteration 24:-89.83460099373984
+Iteration 25:-90.74023845415495
+Iteration 26:-90.43142501442547
+Iteration 27:-90.6046696024348
+Iteration 28:-91.39914347724707
+Iteration 29:-91.16732850102902
+Iteration 30:-91.5027833836029
+Iteration 31:-91.7071946451568
+Iteration 32:-91.8595037521253
+Iteration 33:-92.33570866901997
+Iteration 34:-92.15328495583921
+Iteration 35:-92.18204704563152
+Iteration 36:-91.93869060883462
+Iteration 37:-92.39654764315495
+Iteration 38:-92.5598103761325
+Iteration 39:-92.26353629974928
+Iteration 40:-92.66274293690644
+Iteration 41:-92.66082642461383
+Iteration 42:-92.76946659424159
+Iteration 43:-92.73404162099608
+Iteration 44:-92.79965540793285
+Iteration 45:-92.71567942740015
+Iteration 46:-92.83380841630506
+Iteration 47:-92.88112265285793
+Iteration 48:-92.88487214844258
+Iteration 49:-92.8635315829217
+Iteration 50:-92.82772516002716
+Iteration 51:-92.87902528317811
+Iteration 52:-92.89414811115108
+Iteration 53:-92.9118671559118
+Iteration 54:-92.83563903495283
+Iteration 55:-92.93733966133934
+Iteration 56:-92.94395839467823
+Iteration 57:-92.95343668125913
+Iteration 58:-92.95879750312386
+Iteration 59:-92.96284503540929
+Iteration 60:-92.99032618471067
+Iteration 61:-93.00327437170706
+Iteration 62:-92.96456409180917
+Iteration 63:-93.03938874741662
+Iteration 64:-92.95861310287226
+Iteration 65:-93.02294722318533
+Iteration 66:-93.0188522435021
+Iteration 67:-93.07763229005816
+Iteration 68:-93.09361524031566
+Iteration 69:-93.09160458793042
+Iteration 70:-93.06728089602153
+Iteration 71:-93.08959404679698
+Iteration 72:-93.1408047861203
+Iteration 73:-93.16187938239088
+Iteration 74:-93.15862825883659
+Iteration 75:-93.143459405464
+Iteration 76:-93.14017200274806
+Iteration 77:-93.16542789250529
+Iteration 78:-93.17272755579216
+Iteration 79:-93.15246513605183
+Iteration 80:-93.17687769289802
+Iteration 81:-93.15753642250313
+Iteration 82:-93.11860812302771
+Iteration 83:-93.17452125875492
+Iteration 84:-93.18317784324029
+Iteration 85:-93.1887003034867
+Iteration 86:-93.17309153885789
+Iteration 87:-93.22432913356536
+Iteration 88:-93.22148398064107
+Iteration 89:-93.22847741692591
+Iteration 90:-93.17841811701521
+Iteration 91:-93.14555817430065
+Iteration 92:-93.19053761548987
+Iteration 93:-93.1766710246718
+Iteration 94:-93.20136777933055
+Iteration 95:-93.22789381526447
+Iteration 96:-93.21338992804438
+Iteration 97:-93.24852431064214
+Iteration 98:-93.297813904388
+Iteration 99:-93.20807734327872
+Iteration 100:-93.30640978279247
+Iteration 101:-93.297813904388
+Epochs: 101, del_e: 0.00859587840447773, time=260.88923731725663

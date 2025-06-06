@@ -1,0 +1,24 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/quantum/cuda-quantum@sha256:52b4139fac038eafeacbfc3d161f774d22789acc0823a4c301446b54a31f80b4
+
+%post
+    # Install system dependencies
+    apt-get update && apt-get install -y python3-pip git
+
+    # Upgrade pip
+    pip3 install --upgrade pip
+
+    # Install Python packages
+    pip3 install pyscf
+    pip3 install contfrac
+    pip3 install ipython
+    pip3 install matplotlib
+    pip3 install openfermion
+    pip3 install openfermionpyscf
+
+
+%runscript
+    mount devpts /dev/pts -t devpts
+    cp -r /home/cudaq/* .
+    bash
+

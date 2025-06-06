@@ -1,0 +1,43 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/RbH/mqpu/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/RbH/mqpu/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/RbH/mqpu/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/RbH/mqpu/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/RbH/mqpu/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --nv --no-home --bind /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/RbH/mqpu/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif python3 vqe-test.py
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/RbH/mqpu/vqe-test.py:31: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+terminate called after throwing an instance of 'ubackend::RuntimeError'
+  what():  requested size is too big
+[w002:35666] *** Process received signal ***
+[w002:35666] Signal: Aborted (6)
+[w002:35666] Signal code:  (-6)
+[w002:35666] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x42520)[0x1456df867520]
+[w002:35666] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x12c)[0x1456df8bb9fc]
+[w002:35666] [ 2] /lib/x86_64-linux-gnu/libc.so.6(raise+0x16)[0x1456df867476]
+[w002:35666] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xd3)[0x1456df84d7f3]
+[w002:35666] [ 4] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xa2b9e)[0x1456d67e2b9e]
+[w002:35666] [ 5] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xae20c)[0x1456d67ee20c]
+[w002:35666] [ 6] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xae277)[0x1456d67ee277]
+[w002:35666] [ 7] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xae4d8)[0x1456d67ee4d8]
+[w002:35666] [ 8] /opt/nvidia/cudaq/lib/libnvqir-cusvsim-fp32.so(+0x33217)[0x14568c5e8217]
+[w002:35666] [ 9] /opt/nvidia/cudaq/lib/libnvqir-cusvsim-fp32.so(_ZN5cudaq36CusvsimSingleProcessCircuitSimulatorIfE16addQubitsToStateEmPKv+0xcfb)[0x14568c63344b]
+[w002:35666] [10] /opt/nvidia/cudaq/lib/libnvqir-custatevec-fp32.so(_ZN5nvqir20CircuitSimulatorBaseIfE14allocateQubitsEmPKvN5cudaq20simulation_precisionE+0x2a5)[0x1456b9a35e85]
+[w002:35666] [11] /opt/nvidia/cudaq/lib/libnvqir.so(__quantum__rt__qubit_allocate_array+0xcf)[0x1456b9f7ac9f]
+[w002:35666] [12] [0x14543fc3d35c]
+[w002:35666] [13] [0x14543fc509e8]
+[w002:35666] [14] /opt/nvidia/cudaq/lib/libcudaq.so(altLaunchKernel+0x230)[0x1456baacc690]
+[w002:35666] [15] /opt/nvidia/cudaq/cudaq/mlir/_mlir_libs/_quakeDialects.cpython-310-x86_64-linux-gnu.so(+0x48456c)[0x1456bb09756c]
+[w002:35666] [16] /opt/nvidia/cudaq/cudaq/mlir/_mlir_libs/_quakeDialects.cpython-310-x86_64-linux-gnu.so(+0x484688)[0x1456bb097688]
+[w002:35666] [17] /opt/nvidia/cudaq/cudaq/mlir/_mlir_libs/_quakeDialects.cpython-310-x86_64-linux-gnu.so(+0x38d0be)[0x1456bafa00be]
+[w002:35666] [18] /opt/nvidia/cudaq/cudaq/mlir/_mlir_libs/_quakeDialects.cpython-310-x86_64-linux-gnu.so(+0x38dfea)[0x1456bafa0fea]
+[w002:35666] [19] /opt/nvidia/cudaq/lib/libcudaq.so(+0x747f4)[0x1456baacb7f4]
+[w002:35666] [20] /opt/nvidia/cudaq/lib/libcudaq-platform-default.so(_ZN5cudaq21QuantumExecutionQueue7handlerEv+0x1ea)[0x1456b9e02e9a]
+[w002:35666] [21] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xdc253)[0x1456d681c253]
+[w002:35666] [22] /lib/x86_64-linux-gnu/libc.so.6(+0x94ac3)[0x1456df8b9ac3]
+[w002:35666] [23] /lib/x86_64-linux-gnu/libc.so.6(clone+0x44)[0x1456df94aa04]
+[w002:35666] *** End of error message ***
+/var/spool/slurm/d/job32642575/slurm_script: line 23: 35650 Aborted                 singularity exec --cleanenv --nv --no-home --bind $PWD/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif python3 vqe-test.py

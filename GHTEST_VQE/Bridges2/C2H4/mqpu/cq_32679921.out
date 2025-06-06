@@ -1,0 +1,65 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H4/mqpu/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H4/mqpu/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H4/mqpu/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H4/mqpu/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H4/mqpu/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --nv --no-home --bind /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H4/mqpu/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif python3 vqe.py
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H4/mqpu/vqe.py:33: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+electrons: 16, qubit count: 28, parameters: 3240
+Iteration 1:-52.2379316064144
+Iteration 2:-52.13994998151459
+Iteration 3:-52.21912453211295
+Iteration 4:-52.24783622888732
+Iteration 5:-52.31150743643624
+Iteration 6:-52.41923522313118
+Iteration 7:-52.661373971418904
+Iteration 8:-52.72022168002516
+Iteration 9:-52.68238166830126
+Iteration 10:-52.58968471768673
+Iteration 11:-52.73857825647263
+Iteration 12:-52.68422307098237
+Iteration 13:-52.782792013263894
+Iteration 14:-52.577196132567416
+Iteration 15:-52.68637565706217
+Iteration 16:-52.78308302051105
+Iteration 17:-52.77730579466593
+Iteration 18:-52.78082822603065
+Iteration 19:-52.805923356943836
+Iteration 20:-52.74043545766776
+Iteration 21:-52.89286401832766
+Iteration 22:-52.8477411003208
+Iteration 23:-52.88879809357907
+Iteration 24:-52.850289027573545
+Iteration 25:-52.888048269437974
+Iteration 26:-52.898772592641485
+Iteration 27:-52.91367678008164
+Iteration 28:-52.945469277561195
+Iteration 29:-52.92062675476271
+Iteration 30:-52.925555661688456
+Iteration 31:-52.940326772749934
+Iteration 32:-52.953726510840255
+Iteration 33:-52.953173625171345
+Iteration 34:-52.983825816191334
+Iteration 35:-53.08018043914916
+Iteration 36:-53.06661748892792
+Iteration 37:-53.07523736014522
+Iteration 38:-53.0798808882048
+Iteration 39:-53.08690271310969
+Iteration 40:-53.05720942662317
+Iteration 41:-53.07127095530575
+Iteration 42:-53.041785681695835
+Iteration 43:-53.0875024664983
+Iteration 44:-53.0890964537987
+Iteration 45:-53.09779817709728
+Iteration 46:-53.07906117210922
+Iteration 47:-53.091524694584976
+Iteration 48:-53.09638398789585
+Iteration 49:-53.01673479323715
+Iteration 50:-53.08294450616981
+Iteration 51:-53.09779817709728
+Epochs: 51, del_e: -0.014853670927472251, time=12554.56139672827

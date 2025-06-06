@@ -1,0 +1,42 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/CO2/mqpu/mpiexec/mpi/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/CO2/mqpu/mpiexec/mpi/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/CO2/mqpu/mpiexec/mpi/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/CO2/mqpu/mpiexec/mpi/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/CO2/mqpu/mpiexec/mpi/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --nv --no-home --bind /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/CO2/mqpu/mpiexec/mpi/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif mpiexec -np 2 python3 vqe.py
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/CO2/mqpu/mpiexec/mpi/vqe.py:33: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/CO2/mqpu/mpiexec/mpi/vqe.py:33: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+electrons: 22, qubit count: 30, parameters: 2684
+Iteration 1:-152.8479049252224
+Iteration 2:-153.07376988195531
+Iteration 3:-153.09062557161727
+Iteration 4:-151.48567317843674
+Iteration 5:-154.1022453846666
+Iteration 6:-152.9361126015978
+Iteration 7:-153.1787636146469
+Iteration 8:-153.99186295391414
+Iteration 9:-154.3487539629347
+Iteration 10:-155.04621793720545
+Iteration 11:-154.30524440750685
+Iteration 12:-154.78516606708334
+Iteration 13:-155.26088475146074
+Iteration 14:-154.9997826915829
+Iteration 15:-155.1513765314062
+Iteration 16:-155.46799475244504
+Iteration 17:-154.79556199507988
+Iteration 18:-155.36137758319353
+Iteration 19:-154.97907572120695
+Iteration 20:-155.19916843943057
+Iteration 21:-156.24959054486706
+Iteration 22:-156.5313743351066
+Iteration 23:-156.63010620525333
+Iteration 24:-156.34150423224085
+Iteration 25:-156.67094737546608
+Iteration 26:-156.8741697166862
+slurmstepd: error: *** JOB 32691740 ON w001 CANCELLED AT 2025-06-04T00:45:03 DUE TO TIME LIMIT ***

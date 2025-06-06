@@ -1,0 +1,146 @@
+INFO:    User not listed in /etc/subuid, trying root-mapped namespace
+INFO:    fakeroot command not found
+INFO:    Installing some packages may fail
+INFO:    Starting build...
+Copying blob sha256:a3dca01d5ced579ae16d8169a40fb7c22521469d1c53c14892e0f142bdf07fe0
+Copying blob sha256:bfa6953b10de32929c8ce86b3630270d11524e510bffbaabc2fe58e307835c36
+Copying blob sha256:bfbe77e41a78ee38147c5761aa8bc896d9f6e1e648b23468f294065ffe03c107
+Copying blob sha256:0a0d0d55d972a1379122bf8444f3e4c16cd3dd1f206bd8b1e92101ab0de7fe93
+Copying blob sha256:93397b33ac3e7f50ed498d5ac3cce494b1e5a5e5fc3a18d610ae80577917165b
+Copying blob sha256:8e63b1370b33da750f0fe2e3e7801acd48848494a476dd1f282cc2ed3b638018
+Copying blob sha256:abbfded7b222b12182866d26fff5cad566e89593a07375922e607508f0619806
+Copying blob sha256:972e6c101bbb4845bd32fb72d47781e21c93e8a2dee98f81ee6bcd5811b53480
+Copying blob sha256:2c27247e37f9dde38381925d11f8c46852d889744b92e7bed1e976cdfd60f95b
+Copying blob sha256:2da610dd99a6e98c13f90fa0e005094d5184326315ff122f875c15e30b8647d1
+Copying blob sha256:62468643aa8892a5df954027de25d9037a099475d273391c9c6ba7c29e1c0e45
+Copying blob sha256:9e26a587888383ffd76c16ae7f34f74efb588f3ea478724f0210757f166aa567
+Copying blob sha256:f15d7bd504053b2a511194045455f8ef221b5f889b8371ca810d6b944aac956f
+Copying blob sha256:125acd5c16394531e87aa995b92bd96b371e1345253953ca408267bea4f50306
+Copying blob sha256:84af479192eae81926dd82d17c5329c543078ac1a9c47b837232fccf65fd42c0
+Copying blob sha256:44f082bc50806c86a14a3f7c7854a1e5969cc3820278dafb9399a77942684a01
+Copying blob sha256:1e24f8dd6ff19faa12bd0a7fd7e6c80837afacf986425770c5594e3879663b99
+Copying blob sha256:4fa12d8a5670da3e5d3248d68043ab2f5e0d6ca0bbc4dbfd90d2186207e39643
+Copying blob sha256:40fd76439d1b54968282085fa753673c38a05a84bb413219bae28f17343d45e9
+Copying blob sha256:f166bb12cb61be95baf112265c1c6192155fb4444837ca2539cf789622558d0a
+Copying blob sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+Copying blob sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+Copying blob sha256:975cce059c1296f36d863cb312389cb613a0cc73783d3feb712c2136bd48897b
+Copying blob sha256:d4933646abcf3a44af4c0ad4e54c673898fe0e6896adb75daa86508d6dd5c6d5
+Copying blob sha256:a9d225848ad0c4826e267564d78511c609049617eb2a4d57b8685e6913415e2a
+Copying blob sha256:624b4d172e69c6b57b6bb7ef763fe25c1469f14fb1d71ad5434d019638627433
+Copying blob sha256:66299b53a55e7b7b82817a83964f8fe33f749998ba338b48e1a362ff0223f674
+Copying blob sha256:21cdaec74a3187bbf5842c1c36c28225c90ba09ddcdcf385f34dd1002fd299a6
+Copying blob sha256:96d8a66f51f0a6fccd43546cb9d4bbe83fc079336da9b95318dc6015981b866d
+Copying blob sha256:c625d74d3b90ca69b5999738cce1ed1728f8746b1b108d17bc6ef4ce2d89148b
+Copying blob sha256:170a5dd708edc1063621b46a974a3440048cf668e45717b6ec74be1302066b93
+Copying blob sha256:0f173219926db9dbc9527f4d1403cfc7adab8da596e00f831e42360b961a5b01
+Copying blob sha256:7498ab93dd5ebeb74334eb09747a62e632385865f9ee6350f753b3a32786ba97
+Copying blob sha256:39a53c370fa0632db84c3b578cc18b6550cecce8dabfb3c76bc13c76e7ccb3e1
+Copying blob sha256:3b20486b25ae4a10661c8ed0096618a31eac900414b4b878751ba3cb58b42c0a
+Copying blob sha256:63c14b28424271f9d90982ae01db346b82e1fb2005b65bdfcc67074eca62118b
+Copying blob sha256:70739244ff154ffb6520821007ff1298ece19bde4b4daafde48670ae968bdca0
+Copying blob sha256:bc553aee3a2de1e921226fe3453f256da5b6d4fc1fafb2f37103b28c5a351f68
+Copying blob sha256:b51d4cc32b926820a74dddd19fd3c77f890e8b4d46b23b78edcb4d150f7a5193
+Copying blob sha256:40016113086221c091ce3cb15a5af4ca207750871799574211b0de206f4efaf5
+Copying blob sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+Copying blob sha256:3fc0d5993ba8282d86ccfe0d4c859df5acf7bb6ef025900ff1df4a7aebeaca61
+Copying blob sha256:1e5f4876f182bf1dd43a3f1846439476ac80c5d2b6b62eab2e5508b8f77a77de
+Copying blob sha256:c1d3c744c83a6e89da41f60440e4b328b3efdc403ca7aea7d41bf9c02ea524d7
+Copying blob sha256:0f35c16b3722b3693aa3647fbe66cd310e0139eba90820483231423c6b237ab1
+Copying blob sha256:b7d0bc07761aa3c0c6bd94564648e140800dbbdb93803d8cd859f5beaf429ae9
+Copying blob sha256:10769d6c3d8fd5e1090426af72c36653a3ce034c181b803d9dfce370c1b6ee17
+Copying blob sha256:755fe08b4e715beebb9e12369b0a70a667fc0d0a797a5c8ea7e79e3987fcbd8d
+Copying blob sha256:44c604f6943434511bb6c3ff355d7ff7c9d82aa8efe481186d208430de77925d
+Copying blob sha256:b9805bf06d910063529ee578ce7f5093fa3e0c3622ee1366cdc8971fc73cdd5d
+Copying blob sha256:e0c022dbc9b08350b8fb7367d412ae1d3f17957b6857ca34bf4cb1200a36f8f5
+Copying blob sha256:bad00fff06706f042df69c7dd305d1c300e4b8d4230ba5a364b24c0552e64bcf
+Copying config sha256:aef96c1f7fd528f52e8ebb51ce33951e3a777f4e053e926d2eb030a1fca2221f
+Writing manifest to image destination
+2025/06/02 15:18:55  info unpack layer: sha256:bfbe77e41a78ee38147c5761aa8bc896d9f6e1e648b23468f294065ffe03c107
+2025/06/02 15:18:56  info unpack layer: sha256:a3dca01d5ced579ae16d8169a40fb7c22521469d1c53c14892e0f142bdf07fe0
+2025/06/02 15:18:56  info unpack layer: sha256:8e63b1370b33da750f0fe2e3e7801acd48848494a476dd1f282cc2ed3b638018
+2025/06/02 15:18:56  info unpack layer: sha256:93397b33ac3e7f50ed498d5ac3cce494b1e5a5e5fc3a18d610ae80577917165b
+2025/06/02 15:18:56  info unpack layer: sha256:0a0d0d55d972a1379122bf8444f3e4c16cd3dd1f206bd8b1e92101ab0de7fe93
+2025/06/02 15:18:56  info unpack layer: sha256:bfa6953b10de32929c8ce86b3630270d11524e510bffbaabc2fe58e307835c36
+2025/06/02 15:19:08  info unpack layer: sha256:abbfded7b222b12182866d26fff5cad566e89593a07375922e607508f0619806
+2025/06/02 15:19:08  info unpack layer: sha256:972e6c101bbb4845bd32fb72d47781e21c93e8a2dee98f81ee6bcd5811b53480
+2025/06/02 15:19:08  info unpack layer: sha256:2c27247e37f9dde38381925d11f8c46852d889744b92e7bed1e976cdfd60f95b
+2025/06/02 15:19:08  info unpack layer: sha256:2da610dd99a6e98c13f90fa0e005094d5184326315ff122f875c15e30b8647d1
+2025/06/02 15:19:12  info unpack layer: sha256:62468643aa8892a5df954027de25d9037a099475d273391c9c6ba7c29e1c0e45
+2025/06/02 15:19:12  info unpack layer: sha256:9e26a587888383ffd76c16ae7f34f74efb588f3ea478724f0210757f166aa567
+2025/06/02 15:19:12  info unpack layer: sha256:f15d7bd504053b2a511194045455f8ef221b5f889b8371ca810d6b944aac956f
+2025/06/02 15:19:12  info unpack layer: sha256:125acd5c16394531e87aa995b92bd96b371e1345253953ca408267bea4f50306
+2025/06/02 15:19:12  info unpack layer: sha256:84af479192eae81926dd82d17c5329c543078ac1a9c47b837232fccf65fd42c0
+2025/06/02 15:19:12  info unpack layer: sha256:44f082bc50806c86a14a3f7c7854a1e5969cc3820278dafb9399a77942684a01
+2025/06/02 15:19:12  info unpack layer: sha256:1e24f8dd6ff19faa12bd0a7fd7e6c80837afacf986425770c5594e3879663b99
+2025/06/02 15:19:12  info unpack layer: sha256:4fa12d8a5670da3e5d3248d68043ab2f5e0d6ca0bbc4dbfd90d2186207e39643
+2025/06/02 15:19:12  info unpack layer: sha256:40fd76439d1b54968282085fa753673c38a05a84bb413219bae28f17343d45e9
+2025/06/02 15:19:12  info unpack layer: sha256:f166bb12cb61be95baf112265c1c6192155fb4444837ca2539cf789622558d0a
+2025/06/02 15:19:12  info unpack layer: sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+2025/06/02 15:19:12  info unpack layer: sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+2025/06/02 15:19:12  info unpack layer: sha256:975cce059c1296f36d863cb312389cb613a0cc73783d3feb712c2136bd48897b
+2025/06/02 15:19:18  info unpack layer: sha256:d4933646abcf3a44af4c0ad4e54c673898fe0e6896adb75daa86508d6dd5c6d5
+2025/06/02 15:19:19  info unpack layer: sha256:a9d225848ad0c4826e267564d78511c609049617eb2a4d57b8685e6913415e2a
+2025/06/02 15:19:19  info unpack layer: sha256:624b4d172e69c6b57b6bb7ef763fe25c1469f14fb1d71ad5434d019638627433
+2025/06/02 15:19:24  info unpack layer: sha256:66299b53a55e7b7b82817a83964f8fe33f749998ba338b48e1a362ff0223f674
+2025/06/02 15:19:27  info unpack layer: sha256:21cdaec74a3187bbf5842c1c36c28225c90ba09ddcdcf385f34dd1002fd299a6
+2025/06/02 15:19:29  info unpack layer: sha256:96d8a66f51f0a6fccd43546cb9d4bbe83fc079336da9b95318dc6015981b866d
+2025/06/02 15:19:29  info unpack layer: sha256:c625d74d3b90ca69b5999738cce1ed1728f8746b1b108d17bc6ef4ce2d89148b
+2025/06/02 15:19:30  info unpack layer: sha256:170a5dd708edc1063621b46a974a3440048cf668e45717b6ec74be1302066b93
+2025/06/02 15:19:30  info unpack layer: sha256:0f173219926db9dbc9527f4d1403cfc7adab8da596e00f831e42360b961a5b01
+2025/06/02 15:19:30  info unpack layer: sha256:7498ab93dd5ebeb74334eb09747a62e632385865f9ee6350f753b3a32786ba97
+2025/06/02 15:19:30  info unpack layer: sha256:39a53c370fa0632db84c3b578cc18b6550cecce8dabfb3c76bc13c76e7ccb3e1
+2025/06/02 15:19:30  info unpack layer: sha256:3b20486b25ae4a10661c8ed0096618a31eac900414b4b878751ba3cb58b42c0a
+2025/06/02 15:19:30  info unpack layer: sha256:63c14b28424271f9d90982ae01db346b82e1fb2005b65bdfcc67074eca62118b
+2025/06/02 15:19:30  info unpack layer: sha256:70739244ff154ffb6520821007ff1298ece19bde4b4daafde48670ae968bdca0
+2025/06/02 15:19:31  info unpack layer: sha256:bc553aee3a2de1e921226fe3453f256da5b6d4fc1fafb2f37103b28c5a351f68
+2025/06/02 15:19:31  info unpack layer: sha256:b51d4cc32b926820a74dddd19fd3c77f890e8b4d46b23b78edcb4d150f7a5193
+2025/06/02 15:19:31  info unpack layer: sha256:40016113086221c091ce3cb15a5af4ca207750871799574211b0de206f4efaf5
+2025/06/02 15:19:31  info unpack layer: sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+2025/06/02 15:19:31  info unpack layer: sha256:3fc0d5993ba8282d86ccfe0d4c859df5acf7bb6ef025900ff1df4a7aebeaca61
+2025/06/02 15:19:31  info unpack layer: sha256:1e5f4876f182bf1dd43a3f1846439476ac80c5d2b6b62eab2e5508b8f77a77de
+2025/06/02 15:19:31  info unpack layer: sha256:c1d3c744c83a6e89da41f60440e4b328b3efdc403ca7aea7d41bf9c02ea524d7
+2025/06/02 15:19:31  info unpack layer: sha256:0f35c16b3722b3693aa3647fbe66cd310e0139eba90820483231423c6b237ab1
+2025/06/02 15:19:31  info unpack layer: sha256:b7d0bc07761aa3c0c6bd94564648e140800dbbdb93803d8cd859f5beaf429ae9
+2025/06/02 15:19:31  info unpack layer: sha256:10769d6c3d8fd5e1090426af72c36653a3ce034c181b803d9dfce370c1b6ee17
+2025/06/02 15:19:31  info unpack layer: sha256:755fe08b4e715beebb9e12369b0a70a667fc0d0a797a5c8ea7e79e3987fcbd8d
+2025/06/02 15:19:31  info unpack layer: sha256:44c604f6943434511bb6c3ff355d7ff7c9d82aa8efe481186d208430de77925d
+2025/06/02 15:19:31  info unpack layer: sha256:b9805bf06d910063529ee578ce7f5093fa3e0c3622ee1366cdc8971fc73cdd5d
+2025/06/02 15:19:31  info unpack layer: sha256:e0c022dbc9b08350b8fb7367d412ae1d3f17957b6857ca34bf4cb1200a36f8f5
+2025/06/02 15:19:31  info unpack layer: sha256:bad00fff06706f042df69c7dd305d1c300e4b8d4230ba5a364b24c0552e64bcf
+INFO:    Running post scriptlet
++ apt-get update
+E: setgroups 65534 failed - setgroups (1: Operation not permitted)
+E: setegid 65534 failed - setegid (22: Invalid argument)
+E: seteuid 100 failed - seteuid (22: Invalid argument)
+E: setgroups 0 failed - setgroups (1: Operation not permitted)
+W: chown to _apt:root of directory /var/lib/apt/lists/partial failed - SetupAPTPartialDirectory (22: Invalid argument)
+W: chown to _apt:root of directory /var/lib/apt/lists/auxfiles failed - SetupAPTPartialDirectory (22: Invalid argument)
+E: setgroups 65534 failed - setgroups (1: Operation not permitted)
+E: setegid 65534 failed - setegid (22: Invalid argument)
+E: seteuid 100 failed - seteuid (22: Invalid argument)
+E: setgroups 0 failed - setgroups (1: Operation not permitted)
+E: Method gave invalid 400 URI Failure message: Failed to setgroups - setgroups (1: Operation not permitted)
+E: Method gave invalid 400 URI Failure message: Failed to setgroups - setgroups (1: Operation not permitted)
+E: Method http has died unexpectedly!
+E: Sub-process http returned an error code (112)
++ pip3 install --upgrade pip
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
++ pip3 install pyscf
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install contfrac
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install ipython
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install matplotlib
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install openfermion
+  DEPRECATION: Building 'pubchempy' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'pubchempy'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+qutip 4.7.6 requires scipy<1.13.0,>=1.0, but you have scipy 1.15.3 which is incompatible.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install openfermionpyscf
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+INFO:    Adding runscript
+INFO:    Creating SIF file...
+INFO:    Build complete: cuda-quantum.sif

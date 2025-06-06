@@ -1,0 +1,107 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/KH/mpi-mqpu/2gpu/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/KH/mpi-mqpu/2gpu/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/KH/mpi-mqpu/2gpu/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/KH/mpi-mqpu/2gpu/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/KH/mpi-mqpu/2gpu/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ export CUDAQ_MGPU_NQUBITS_THRESH=30
++ CUDAQ_MGPU_NQUBITS_THRESH=30
++ singularity exec --cleanenv --nv --no-home --bind /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/KH/mpi-mqpu/2gpu/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif mpiexec -np 2 python3 vqe-test.py
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/KH/mpi-mqpu/2gpu/vqe-test.py:31: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+electrons: 20, qubit count: 28, parameters: 2220
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/KH/mpi-mqpu/2gpu/vqe-test.py:31: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+electrons: 20, qubit count: 28, parameters: 2220
+Iteration 1:-489.5565866299403
+Iteration 1:-489.55581219297653
+Iteration 2:-488.4213372135752
+Iteration 2:-488.4225269273615
+Iteration 3:-484.81254421797246
+Iteration 3:-484.8116947528114
+Iteration 4:-483.2510300452617
+Iteration 4:-483.2513122831645
+Iteration 5:-489.5721353616065
+Iteration 5:-489.570815032585
+Iteration 6:-488.17031800771196
+Iteration 6:-488.17002093789125
+Iteration 7:-490.32566330988624
+Iteration 7:-490.3291368502596
+Iteration 8:-489.4269250884595
+Iteration 8:-489.42973429314935
+Iteration 9:-490.3800656688771
+Iteration 9:-490.3860208148095
+Iteration 10:-493.0877237338707
+Iteration 10:-493.0982506336916
+Iteration 11:-492.0985749643683
+Iteration 11:-492.10966883667186
+Iteration 12:-492.99248992050514
+Iteration 12:-493.0055598902501
+Iteration 13:-493.18818565463397
+Iteration 13:-493.19697174582626
+Iteration 14:-492.7212169115393
+Iteration 14:-492.72862284043515
+Iteration 15:-493.5515503859649
+Iteration 15:-493.5452281221821
+Iteration 16:-494.09977184898213
+Iteration 16:-494.1071721791151
+Iteration 17:-493.5953881686305
+Iteration 17:-493.5854843782236
+Iteration 18:-493.6788504198372
+Iteration 18:-493.6860858406936
+Iteration 19:-494.1536659143779
+Iteration 19:-494.1628962817043
+Iteration 20:-493.52681028908745
+Iteration 20:-493.5333087170524
+Iteration 21:-495.712669235056
+Iteration 21:-495.72015193490853
+Iteration 22:-496.1173068990165
+Iteration 22:-496.12692499896735
+Iteration 23:-497.03326576605946
+Iteration 23:-497.041344398551
+Iteration 24:-495.94309489160224
+Iteration 24:-495.94799122375815
+Iteration 25:-497.12373951013006
+Iteration 25:-497.1315744432626
+Iteration 26:-497.2678700126486
+Iteration 26:-497.27611123340085
+Iteration 27:-497.2776424024762
+Iteration 27:-497.28707787012166
+Iteration 28:-497.7152468270495
+Iteration 28:-497.7242357607497
+Iteration 29:-497.61874112017216
+Iteration 29:-497.62710316642216
+Iteration 30:-497.73229941565603
+Iteration 30:-497.7237627216002
+Iteration 31:-497.65870238034705
+Iteration 31:-497.66779474638736
+Iteration 32:-497.4707931426561
+Iteration 32:-497.4790235486426
+Iteration 33:-497.6985494259078
+Iteration 33:-497.68989905866727
+Iteration 34:-497.55532393071405
+Iteration 34:-497.5468236586992
+Iteration 35:-497.8570169141553
+Iteration 35:-497.8483764012235
+Iteration 36:-497.7584594085554
+Iteration 36:-497.7503757061586
+Iteration 37:-497.84001803153126
+Iteration 37:-497.8314580579098
+Iteration 38:-497.61647104882576
+Iteration 38:-497.6249596097628
+Iteration 39:-497.7704577102411
+Iteration 39:-497.77915553739854
+Iteration 40:-497.70302885643804
+Iteration 40:-497.71136493829306
+Iteration 41:-501.05997726154885
+Iteration 41:-501.06368874850364
+Iteration 42:-501.32793504718387
+Iteration 42:-501.3313708362119
+Iteration 43:-501.2312044701599
+Iteration 43:-501.233929691408
+Iteration 44:-502.52345380767827
+Iteration 44:-502.5273292826678
+slurmstepd: error: *** JOB 32665090 ON w004 CANCELLED AT 2025-06-02T23:06:57 DUE TO TIME LIMIT ***

@@ -1,0 +1,36 @@
+/home/nnepal/CUDA-Q-PSC/Container/COBYLA/RbH/mqpu/vqe-test.py:31: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+terminate called after throwing an instance of 'ubackend::RuntimeError'
+  what():  requested size is too big
+[ghtest1:3531403] *** Process received signal ***
+[ghtest1:3531403] Signal: Aborted (6)
+[ghtest1:3531403] Signal code:  (-6)
+[ghtest1:3531403] [ 0] linux-vdso.so.1(__kernel_rt_sigreturn+0x0)[0xffffbea817f0]
+[ghtest1:3531403] [ 1] /lib/aarch64-linux-gnu/libc.so.6(+0x7f1f0)[0xffffbe80f1f0]
+[ghtest1:3531403] [ 2] /lib/aarch64-linux-gnu/libc.so.6(raise+0x1c)[0xffffbe7ca67c]
+[ghtest1:3531403] [ 3] /lib/aarch64-linux-gnu/libc.so.6(abort+0xe4)[0xffffbe7b7130]
+[ghtest1:3531403] [ 4] /lib/aarch64-linux-gnu/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x18c)[0xffff1ac162dc]
+[ghtest1:3531403] [ 5] /lib/aarch64-linux-gnu/libstdc++.so.6(+0xa2abc)[0xffff1ac12abc]
+[ghtest1:3531403] [ 6] /lib/aarch64-linux-gnu/libstdc++.so.6(+0xa2b20)[0xffff1ac12b20]
+[ghtest1:3531403] [ 7] /lib/aarch64-linux-gnu/libstdc++.so.6(+0xa2e04)[0xffff1ac12e04]
+[ghtest1:3531403] [ 8] /opt/nvidia/cudaq/lib/libnvqir-cusvsim-fp32.so(+0xad968)[0xfffe34d0d968]
+[ghtest1:3531403] [ 9] /opt/nvidia/cudaq/lib/libnvqir-cusvsim-fp32.so(_ZN5cudaq36CusvsimSingleProcessCircuitSimulatorIfE16addQubitsToStateEmPKv+0x6c0)[0xfffe34cc51d0]
+[ghtest1:3531403] [10] /opt/nvidia/cudaq/lib/libnvqir-custatevec-fp32.so(_ZN5nvqir20CircuitSimulatorBaseIfE14allocateQubitsEmPKvN5cudaq20simulation_precisionE+0x22c)[0xfffe5fe4b25c]
+[ghtest1:3531403] [11] /opt/nvidia/cudaq/lib/libnvqir.so(__quantum__rt__qubit_allocate_array+0xc4)[0xfffe603d3524]
+[ghtest1:3531403] [12] [0xfffae0526538]
+[ghtest1:3531403] [13] [0xfffae053e15c]
+[ghtest1:3531403] [14] /opt/nvidia/cudaq/lib/libcudaq.so(altLaunchKernel+0x16c)[0xfffe60f3935c]
+[ghtest1:3531403] [15] /opt/nvidia/cudaq/cudaq/mlir/_mlir_libs/_quakeDialects.cpython-310-aarch64-linux-gnu.so(+0x448f40)[0xfffe614d8f40]
+[ghtest1:3531403] [16] /opt/nvidia/cudaq/cudaq/mlir/_mlir_libs/_quakeDialects.cpython-310-aarch64-linux-gnu.so(+0x449250)[0xfffe614d9250]
+[ghtest1:3531403] [17] /opt/nvidia/cudaq/cudaq/mlir/_mlir_libs/_quakeDialects.cpython-310-aarch64-linux-gnu.so(+0x37170c)[0xfffe6140170c]
+[ghtest1:3531403] [18] /opt/nvidia/cudaq/cudaq/mlir/_mlir_libs/_quakeDialects.cpython-310-aarch64-linux-gnu.so(+0x3723d8)[0xfffe614023d8]
+[ghtest1:3531403] [19] /opt/nvidia/cudaq/lib/libcudaq.so(+0x681dc)[0xfffe60f381dc]
+[ghtest1:3531403] [20] /opt/nvidia/cudaq/lib/libcudaq-platform-default.so(_ZN5cudaq21QuantumExecutionQueue7handlerEv+0x130)[0xfffe602397d0]
+[ghtest1:3531403] [21] /lib/aarch64-linux-gnu/libstdc++.so.6(+0xd31fc)[0xffff1ac431fc]
+[ghtest1:3531403] [22] /lib/aarch64-linux-gnu/libc.so.6(+0x7d5b8)[0xffffbe80d5b8]
+[ghtest1:3531403] [23] /lib/aarch64-linux-gnu/libc.so.6(+0xe5edc)[0xffffbe875edc]
+[ghtest1:3531403] *** End of error message ***
+
+[nnepal@ghtest1 mqpu]$ 
+[1]+  Aborted                 (core dumped) singularity exec --cleanenv --no-home --nv --bind $PWD/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /home/nnepal/CUDA-Q-PSC/Container/cuda-quantum.sif python3 vqe-test.py > out
+

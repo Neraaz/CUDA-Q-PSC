@@ -1,0 +1,25 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H6/mqpu/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H6/mqpu/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H6/mqpu/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H6/mqpu/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H6/mqpu/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --nv --no-home --bind /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H6/mqpu/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif python3 vqe.py
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/C2H6/mqpu/vqe.py:33: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+electrons: 18, qubit count: 32, parameters: 5607
+Iteration 1:-52.73189320696136
+Iteration 2:-52.70232564149347
+Iteration 3:-52.795533897117416
+Iteration 4:-52.759925090518365
+Iteration 5:-52.7743642525508
+Iteration 6:-52.78479842807057
+Iteration 7:-52.7728102563725
+Iteration 8:-52.93107263909418
+Iteration 9:-52.85409041174993
+Iteration 10:-52.842029423160355
+Iteration 11:-52.93107263909418
+Epochs: 11, del_e: -0.08904321593382747, time=83947.32662032405

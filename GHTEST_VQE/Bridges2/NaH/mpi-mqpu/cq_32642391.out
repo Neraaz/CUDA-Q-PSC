@@ -1,0 +1,72 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/NaH/mpi-mqpu/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/NaH/mpi-mqpu/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/NaH/mpi-mqpu/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/NaH/mpi-mqpu/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/NaH/mpi-mqpu/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --nv --no-home --bind /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/NaH/mpi-mqpu/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif python3 vqe-test.py
+/ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1/COBYLA/NaH/mpi-mqpu/vqe-test.py:31: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+electrons: 12, qubit count: 20, parameters: 804
+Iteration 1:-115.45825811116222
+Iteration 2:-115.95160229346388
+Iteration 3:-114.37310372770688
+Iteration 4:-114.02756965096896
+Iteration 5:-114.95164794675529
+Iteration 6:-115.22814377777061
+Iteration 7:-117.2839182988181
+Iteration 8:-116.76705606948438
+Iteration 9:-117.90194532244429
+Iteration 10:-119.79715442339202
+Iteration 11:-119.01919237674245
+Iteration 12:-119.69284506965481
+Iteration 13:-118.83492494674769
+Iteration 14:-118.87930448248287
+Iteration 15:-119.92539357899206
+Iteration 16:-119.97905775788581
+Iteration 17:-119.58209391946443
+Iteration 18:-119.40628055289989
+Iteration 19:-119.97604532817964
+Iteration 20:-119.55867261207047
+Iteration 21:-121.43068654989229
+Iteration 22:-121.18148038826703
+Iteration 23:-120.59050910475855
+Iteration 24:-120.2439391151098
+Iteration 25:-120.98949586239952
+Iteration 26:-121.71587736325635
+Iteration 27:-120.51584688834825
+Iteration 28:-121.51039994365847
+Iteration 29:-122.79177309841059
+Iteration 30:-123.39848345617823
+Iteration 31:-123.83846375282921
+Iteration 32:-124.55741929847093
+Iteration 33:-123.94643120748329
+Iteration 34:-124.27757073775786
+Iteration 35:-125.05980980609712
+Iteration 36:-125.28826558950607
+Iteration 37:-124.73438638014032
+Iteration 38:-125.10228057583974
+Iteration 39:-125.2858875650244
+Iteration 40:-124.71104991056214
+Iteration 41:-124.91314153033632
+Iteration 42:-125.53248376377985
+Iteration 43:-125.63077712978235
+Iteration 44:-125.56310724300796
+Iteration 45:-125.75286522172875
+Iteration 46:-125.31804997685843
+Iteration 47:-125.76133685304983
+Iteration 48:-125.94926228177307
+Iteration 49:-125.95996828329598
+Iteration 50:-125.87719151814514
+Iteration 51:-125.97957915953026
+Iteration 52:-125.98208837132147
+Iteration 53:-126.04992065364307
+Iteration 54:-125.88710891684548
+Iteration 55:-126.03377116770761
+Iteration 56:-126.03618792308563
+Iteration 57:-126.02655591102076
+Iteration 58:-125.8202585341769
+slurmstepd: error: *** JOB 32642391 ON w003 CANCELLED AT 2025-05-31T17:00:25 ***

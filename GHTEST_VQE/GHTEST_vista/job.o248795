@@ -1,0 +1,193 @@
+Reading package lists...
+Requirement already satisfied: pip in /usr/lib/python3/dist-packages (22.0.2)
+Collecting pip
+  Downloading pip-25.1.1-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 20.0 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.0.2
+    Not uninstalling pip at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'pip'. No files were found to uninstall.
+Successfully installed pip-25.1.1
+Collecting pyscf
+  Downloading pyscf-2.9.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.4 kB)
+Requirement already satisfied: numpy!=1.16,!=1.17,>=1.13 in /usr/local/lib/python3.10/dist-packages (from pyscf) (1.26.4)
+Requirement already satisfied: scipy>=1.6.0 in /usr/local/lib/python3.10/dist-packages (from pyscf) (1.12.0)
+Collecting h5py>=2.7 (from pyscf)
+  Downloading h5py-3.13.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from pyscf) (59.6.0)
+Downloading pyscf-2.9.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (44.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.1/44.1 MB 27.8 MB/s eta 0:00:00
+Downloading h5py-3.13.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (4.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 160.6 MB/s eta 0:00:00
+Installing collected packages: h5py, pyscf
+
+Successfully installed h5py-3.13.0 pyscf-2.9.0
+Collecting contfrac
+  Downloading ContFrac-1.0.0-py3-none-any.whl.metadata (3.3 kB)
+Downloading ContFrac-1.0.0-py3-none-any.whl (5.8 kB)
+Installing collected packages: contfrac
+Successfully installed contfrac-1.0.0
+Requirement already satisfied: ipython in /usr/local/lib/python3.10/dist-packages (8.36.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython) (5.2.1)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from ipython) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in /usr/local/lib/python3.10/dist-packages (from ipython) (0.19.2)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython) (0.1.7)
+Requirement already satisfied: pexpect>4.3 in /usr/local/lib/python3.10/dist-packages (from ipython) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /usr/local/lib/python3.10/dist-packages (from ipython) (3.0.51)
+Requirement already satisfied: pygments>=2.4.0 in /usr/local/lib/python3.10/dist-packages (from ipython) (2.19.1)
+Requirement already satisfied: stack_data in /usr/local/lib/python3.10/dist-packages (from ipython) (0.6.3)
+Requirement already satisfied: traitlets>=5.13.0 in /usr/local/lib/python3.10/dist-packages (from ipython) (5.14.3)
+Requirement already satisfied: typing_extensions>=4.6 in /usr/local/lib/python3.10/dist-packages (from ipython) (4.13.2)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython) (0.2.13)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in /usr/local/lib/python3.10/dist-packages (from jedi>=0.16->ipython) (0.8.4)
+Requirement already satisfied: ptyprocess>=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect>4.3->ipython) (0.7.0)
+Requirement already satisfied: executing>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython) (2.2.0)
+Requirement already satisfied: asttokens>=2.1.0 in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython) (3.0.0)
+Requirement already satisfied: pure-eval in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython) (0.2.3)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.10.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (4.58.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.4.8)
+Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.26.4)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Collecting openfermion
+  Downloading openfermion-1.7.0-py3-none-any.whl.metadata (13 kB)
+Collecting cirq-core (from openfermion)
+  Downloading cirq_core-1.5.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting deprecation (from openfermion)
+  Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: h5py>=3.10.0 in /usr/local/lib/python3.10/dist-packages (from openfermion) (3.13.0)
+Collecting networkx (from openfermion)
+  Downloading networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: numpy<2.0,>=1.24 in /usr/local/lib/python3.10/dist-packages (from openfermion) (1.26.4)
+Collecting pubchempy (from openfermion)
+  Downloading PubChemPy-1.0.4.tar.gz (29 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: requests~=2.32.2 in /usr/local/lib/python3.10/dist-packages (from openfermion) (2.32.3)
+Collecting scipy~=1.15 (from openfermion)
+  Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (61 kB)
+Collecting sympy (from openfermion)
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion) (2025.4.26)
+Requirement already satisfied: attrs>=21.3.0 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion) (25.3.0)
+Collecting duet>=0.2.8 (from cirq-core->openfermion)
+  Downloading duet-0.2.9-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: matplotlib~=3.7 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion) (3.10.3)
+Collecting pandas~=2.0 (from cirq-core->openfermion)
+  Downloading pandas-2.2.3-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (89 kB)
+Collecting sortedcontainers~=2.0 (from cirq-core->openfermion)
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: typing_extensions>=4.2 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion) (4.13.2)
+Collecting tqdm>=4.12 (from cirq-core->openfermion)
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion) (4.58.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion) (1.4.8)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion) (2.9.0.post0)
+Collecting pytz>=2020.1 (from pandas~=2.0->cirq-core->openfermion)
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas~=2.0->cirq-core->openfermion)
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7->matplotlib~=3.7->cirq-core->openfermion) (1.17.0)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->openfermion)
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Downloading openfermion-1.7.0-py3-none-any.whl (44.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.7/44.7 MB 26.4 MB/s eta 0:00:00
+Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (35.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.5/35.5 MB 57.5 MB/s eta 0:00:00
+Downloading cirq_core-1.5.0-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 225.7 MB/s eta 0:00:00
+Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 326.8 MB/s eta 0:00:00
+Downloading pandas-2.2.3-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (66.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 MB 135.4 MB/s eta 0:00:00
+Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Downloading duet-0.2.9-py3-none-any.whl (29 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 310.0 MB/s eta 0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 124.3 MB/s eta 0:00:00
+Building wheels for collected packages: pubchempy
+  Building wheel for pubchempy (setup.py): started
+  Building wheel for pubchempy (setup.py): finished with status 'done'
+  Created wheel for pubchempy: filename=PubChemPy-1.0.4-py3-none-any.whl size=13834 sha256=da0d5bf1218009ff64e8a4d994ce4d9c3eb9d1a18baba55aa2e12080ce978974
+  Stored in directory: /root/.cache/pip/wheels/90/7c/45/18a0671e3c3316966ef7ed9ad2b3f3300a7e41d3421a44e799
+Successfully built pubchempy
+Installing collected packages: sortedcontainers, pytz, pubchempy, mpmath, tzdata, tqdm, sympy, scipy, networkx, duet, deprecation, pandas, cirq-core, openfermion
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.12.0
+    Uninstalling scipy-1.12.0:
+      Successfully uninstalled scipy-1.12.0
+
+Successfully installed cirq-core-1.5.0 deprecation-2.1.0 duet-0.2.9 mpmath-1.3.0 networkx-3.4.2 openfermion-1.7.0 pandas-2.2.3 pubchempy-1.0.4 pytz-2025.2 scipy-1.15.3 sortedcontainers-2.4.0 sympy-1.14.0 tqdm-4.67.1 tzdata-2025.2
+Collecting openfermionpyscf
+  Downloading openfermionpyscf-0.5-py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: openfermion>=0.5 in /usr/local/lib/python3.10/dist-packages (from openfermionpyscf) (1.7.0)
+Requirement already satisfied: pyscf in /usr/local/lib/python3.10/dist-packages (from openfermionpyscf) (2.9.0)
+Collecting pytest (from openfermionpyscf)
+  Downloading pytest-8.4.0-py3-none-any.whl.metadata (7.7 kB)
+Requirement already satisfied: cirq-core in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.5.0)
+Requirement already satisfied: deprecation in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (2.1.0)
+Requirement already satisfied: h5py>=3.10.0 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (3.13.0)
+Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (3.4.2)
+Requirement already satisfied: numpy<2.0,>=1.24 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.26.4)
+Requirement already satisfied: pubchempy in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.0.4)
+Requirement already satisfied: requests~=2.32.2 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (2.32.3)
+Requirement already satisfied: scipy~=1.15 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.15.3)
+Requirement already satisfied: sympy in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.14.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion>=0.5->openfermionpyscf) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion>=0.5->openfermionpyscf) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion>=0.5->openfermionpyscf) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion>=0.5->openfermionpyscf) (2025.4.26)
+Requirement already satisfied: attrs>=21.3.0 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion>=0.5->openfermionpyscf) (25.3.0)
+Requirement already satisfied: duet>=0.2.8 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion>=0.5->openfermionpyscf) (0.2.9)
+Requirement already satisfied: matplotlib~=3.7 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion>=0.5->openfermionpyscf) (3.10.3)
+Requirement already satisfied: pandas~=2.0 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion>=0.5->openfermionpyscf) (2.2.3)
+Requirement already satisfied: sortedcontainers~=2.0 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion>=0.5->openfermionpyscf) (2.4.0)
+Requirement already satisfied: typing_extensions>=4.2 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion>=0.5->openfermionpyscf) (4.13.2)
+Requirement already satisfied: tqdm>=4.12 in /usr/local/lib/python3.10/dist-packages (from cirq-core->openfermion>=0.5->openfermionpyscf) (4.67.1)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (4.58.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (1.4.8)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas~=2.0->cirq-core->openfermion>=0.5->openfermionpyscf) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas~=2.0->cirq-core->openfermion>=0.5->openfermionpyscf) (2025.2)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7->matplotlib~=3.7->cirq-core->openfermion>=0.5->openfermionpyscf) (1.17.0)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from pyscf->openfermionpyscf) (59.6.0)
+Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->openfermionpyscf) (1.3.0)
+Collecting iniconfig>=1 (from pytest->openfermionpyscf)
+  Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting pluggy<2,>=1.5 (from pytest->openfermionpyscf)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest->openfermionpyscf) (2.19.1)
+Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->openfermionpyscf) (2.2.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy->openfermion>=0.5->openfermionpyscf) (1.3.0)
+Downloading openfermionpyscf-0.5-py3-none-any.whl (16 kB)
+Downloading pytest-8.4.0-py3-none-any.whl (363 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Installing collected packages: pluggy, iniconfig, pytest, openfermionpyscf
+
+Successfully installed iniconfig-2.1.0 openfermionpyscf-0.5 pluggy-1.6.0 pytest-8.4.0

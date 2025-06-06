@@ -1,0 +1,1 @@
+CUDAQ_MGPU_NQUBITS_THRESH=30 singularity exec --cleanenv --no-home --nv --bind $PWD/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /home/nnepal/CUDA-Q-PSC/Container/cuda-quantum.sif mpiexec -np 2 python3 vqe-test.py > out &

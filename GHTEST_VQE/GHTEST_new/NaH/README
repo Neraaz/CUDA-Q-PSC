@@ -1,0 +1,20 @@
+logging every 10 sec:
+
+nvidia-smi --query-gpu=index,name,utilization.gpu,utilization.memory,memory.used,memory.free --format=csv -l 10 >> gpu_log &
+
+nvidia-smi runs on the CPU.
+
+Submitting job:
+
+export SINGULARITY_CACHEDIR=$PWD/singularity_cache
+export OPENFERMION_DATA_DIRECTORY=$PWD/openfermion_data
+mkdir -p "$OPENFERMION_DATA_DIRECTORY"
+
+export OMPI_MCA_opal_cuda_support=true
+export OMPI_MCA_btl='^openib'
+
+singularity exec --cleanenv --no-home --bind $PWD/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data --nv /home/nnepal/CUDA-Q-PSC/Container/cuda-quantum.sif mpiexec -np 1 python3 vqe-test.py > out &
+
+#To run on specific cpus,
+
+taskset -c 0-144 singularity exec --cleanenv --no-home --bind $PWD/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /home/nnepal/CUDA-Q-PSC/Container/cuda-quantum.sif python3 vqe-test.py > out &

@@ -1,0 +1,21 @@
+/home/nnepal/CUDA-Q-PSC/Container/mpi2/mpi2-mgpu/try2/vqe-test.py:31: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+/home/nnepal/CUDA-Q-PSC/Container/mpi2/mpi2-mgpu/try2/vqe-test.py:31: ComplexWarning: Casting complex values to real discards the imaginary part
+  spin_ham = cudaq.SpinOperator(qubit_hamiltonian)
+lRuntimeError: The current quantum_platform does not support parallel distribution of observe() expectation value computations.
+RuntimeError: The current quantum_platform does not support parallel distribution of observe() expectation value computations.
+s--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[3749,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
+
+bash: l: command not found...
+[3]+  Exit 1                  singularity exec --cleanenv --no-home --bind $PWD/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data --nv /home/nnepal/CUDA-Q-PSC/Container/cuda-quantum.sif mpiexec -np 2 python3 vqe-test.py > out
+
