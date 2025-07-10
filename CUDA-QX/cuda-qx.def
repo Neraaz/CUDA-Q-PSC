@@ -1,0 +1,20 @@
+Bootstrap: docker
+From: ghcr.io/nvidia/cudaqx
+
+%post
+    # Install system dependencies
+    apt-get update && apt-get install -y python3-pip git gfortran
+
+    # Upgrade pip
+    pip3 install --upgrade pip
+
+    # Install Python packages
+    pip3 install cudaq-qec cudaq-solvers
+    pip3 install ipython
+    pip3 install matplotlib
+
+%runscript
+    mount devpts /dev/pts -t devpts
+    cp -r /home/cudaq/* .
+    bash
+

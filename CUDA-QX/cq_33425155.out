@@ -1,0 +1,41 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/CUDA-QX/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/CUDA-QX/singularity_cache
++ singularity exec --cleanenv --nv --no-home /jet/home/nnepal/tests/cudaq_test/CUDA-QX/cuda-qx.sif python3 vqe.py
+Final <H> = -1.1370217422533062
+ This problem is unconstrained.
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            3     M =           10
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f= -1.04043D+00    |proj g|=  3.20803D-01
+
+At iterate    1    f= -1.04741D+00    |proj g|=  3.06524D-01
+
+At iterate    2    f= -1.13564D+00    |proj g|=  1.06964D-01
+
+At iterate    3    f= -1.13693D+00    |proj g|=  3.24539D-02
+
+At iterate    4    f= -1.13702D+00    |proj g|=  1.79737D-02
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    3      4      6      1     0     0   1.797D-02  -1.137D+00
+  F =  -1.1370216309125443     
+
+CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             

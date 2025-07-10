@@ -1,0 +1,394 @@
+INFO:    User not listed in /etc/subuid, trying root-mapped namespace
+INFO:    Could not start root-mapped namespace
+INFO:    The %post section will be run under the fakeroot command
+INFO:    Using --fix-perms because building from a definition file
+INFO:     without either root user or unprivileged user namespaces
+INFO:    Starting build...
+INFO:    Fetching OCI image...
+INFO:    Extracting OCI image...
+WARNING: The --fix-perms option modifies the filesystem permissions on the resulting container.
+INFO:    Inserting Apptainer configuration...
+INFO:    Running post scriptlet
++ apt-get update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:2 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  InRelease [1581 B]
+Get:3 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [4795 kB]
+Get:5 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  Packages [1804 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3102 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1266 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [48.5 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3413 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [56.4 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [4948 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1567 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [38.4 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [113 kB]
+Fetched 41.5 MB in 3s (12.1 MB/s)
+Reading package lists...
++ apt-get install -y python3-pip git gfortran
+Reading package lists...
+Building dependency tree...
+Reading state information...
+gfortran is already the newest version (4:11.2.0-1ubuntu1).
+Suggested packages:
+  gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+  gitk gitweb git-cvs git-mediawiki git-svn
+Recommended packages:
+  patch less build-essential python3-dev
+The following packages will be upgraded:
+  git python3-pip
+2 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
+Need to get 4472 kB of archives.
+After this operation, 3072 B disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git amd64 1:2.34.1-1ubuntu1.13 [3166 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-pip all 22.0.2+dfsg-1ubuntu0.6 [1306 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 4472 kB in 1s (3777 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 16704 files and directories currently installed.)
+Preparing to unpack .../git_1%3a2.34.1-1ubuntu1.13_amd64.deb ...
+Unpacking git (1:2.34.1-1ubuntu1.13) over (1:2.34.1-1ubuntu1.12) ...
+Preparing to unpack .../python3-pip_22.0.2+dfsg-1ubuntu0.6_all.deb ...
+Unpacking python3-pip (22.0.2+dfsg-1ubuntu0.6) over (22.0.2+dfsg-1ubuntu0.5) ...
+Setting up git (1:2.34.1-1ubuntu1.13) ...
+Setting up python3-pip (22.0.2+dfsg-1ubuntu0.6) ...
++ pip3 install --upgrade pip
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Requirement already satisfied: pip in /usr/lib/python3/dist-packages (22.0.2)
+Collecting pip
+  Downloading pip-25.1.1-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 12.7 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.0.2
+    Not uninstalling pip at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'pip'. No files were found to uninstall.
+Successfully installed pip-25.1.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
++ pip3 install cudaq-qec cudaq-solvers
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting cudaq-qec
+  Downloading cudaq_qec-0.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Collecting cudaq-solvers
+  Downloading cudaq_solvers-0.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (2.6 kB)
+Collecting cuda-quantum-cu12>=0.11 (from cudaq-qec)
+  Downloading cuda_quantum_cu12-0.11.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (8.5 kB)
+Collecting fastapi (from cudaq-solvers)
+  Downloading fastapi-0.116.0-py3-none-any.whl.metadata (28 kB)
+Collecting networkx (from cudaq-solvers)
+  Downloading networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting pyscf (from cudaq-solvers)
+  Downloading pyscf-2.9.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (from cudaq-solvers) (1.12.0)
+Collecting uvicorn (from cudaq-solvers)
+  Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting astpretty~=3.0 (from cuda-quantum-cu12>=0.11->cudaq-qec)
+  Downloading astpretty-3.0.0-py2.py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: cuquantum-python-cu12>=25.03 in /usr/local/lib/python3.10/dist-packages (from cuda-quantum-cu12>=0.11->cudaq-qec) (25.3.0)
+Requirement already satisfied: numpy>=1.24 in /usr/local/lib/python3.10/dist-packages (from cuda-quantum-cu12>=0.11->cudaq-qec) (1.26.4)
+Requirement already satisfied: requests>=2.31 in /usr/local/lib/python3.10/dist-packages (from cuda-quantum-cu12>=0.11->cudaq-qec) (2.32.3)
+Collecting nvidia-cublas-cu12~=12.0 (from cuda-quantum-cu12>=0.11->cudaq-qec)
+  Downloading nvidia_cublas_cu12-12.9.1.4-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-curand-cu12~=10.3 (from cuda-quantum-cu12>=0.11->cudaq-qec)
+  Downloading nvidia_curand_cu12-10.3.10.19-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime-cu12~=12.0 (from cuda-quantum-cu12>=0.11->cudaq-qec)
+  Downloading nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusolver-cu12~=11.4 (from cuda-quantum-cu12>=0.11->cudaq-qec)
+  Downloading nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl.metadata (1.9 kB)
+Collecting nvidia-cuda-nvrtc-cu12~=12.0 (from cuda-quantum-cu12>=0.11->cudaq-qec)
+  Downloading nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvjitlink-cu12 (from nvidia-cusolver-cu12~=11.4->cuda-quantum-cu12>=0.11->cudaq-qec)
+  Downloading nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusparse-cu12 (from nvidia-cusolver-cu12~=11.4->cuda-quantum-cu12>=0.11->cudaq-qec)
+  Downloading nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Requirement already satisfied: custatevec-cu12~=1.8 in /usr/local/lib/python3.10/dist-packages (from cuquantum-python-cu12>=25.03->cuda-quantum-cu12>=0.11->cudaq-qec) (1.8.0)
+Requirement already satisfied: cutensornet-cu12~=2.7 in /usr/local/lib/python3.10/dist-packages (from cuquantum-python-cu12>=25.03->cuda-quantum-cu12>=0.11->cudaq-qec) (2.7.0)
+Requirement already satisfied: cudensitymat-cu12~=0.1 in /usr/local/lib/python3.10/dist-packages (from cuquantum-python-cu12>=25.03->cuda-quantum-cu12>=0.11->cudaq-qec) (0.1.0)
+Requirement already satisfied: cupy-cuda12x>=13.0 in /usr/local/lib/python3.10/dist-packages (from cuquantum-python-cu12>=25.03->cuda-quantum-cu12>=0.11->cudaq-qec) (13.4.1)
+Requirement already satisfied: cutensor-cu12<3,>=2.2 in /usr/local/lib/python3.10/dist-packages (from cudensitymat-cu12~=0.1->cuquantum-python-cu12>=25.03->cuda-quantum-cu12>=0.11->cudaq-qec) (2.2.0)
+Requirement already satisfied: fastrlock>=0.5 in /usr/local/lib/python3.10/dist-packages (from cupy-cuda12x>=13.0->cuquantum-python-cu12>=25.03->cuda-quantum-cu12>=0.11->cudaq-qec) (0.8.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.31->cuda-quantum-cu12>=0.11->cudaq-qec) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests>=2.31->cuda-quantum-cu12>=0.11->cudaq-qec) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests>=2.31->cuda-quantum-cu12>=0.11->cudaq-qec) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests>=2.31->cuda-quantum-cu12>=0.11->cudaq-qec) (2025.4.26)
+Collecting starlette<0.47.0,>=0.40.0 (from fastapi->cudaq-solvers)
+  Downloading starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->cudaq-solvers)
+  Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+Requirement already satisfied: typing-extensions>=4.8.0 in /usr/local/lib/python3.10/dist-packages (from fastapi->cudaq-solvers) (4.13.2)
+Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->cudaq-solvers)
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.33.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->cudaq-solvers)
+  Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting typing-inspection>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->cudaq-solvers)
+  Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: anyio<5,>=3.6.2 in /usr/local/lib/python3.10/dist-packages (from starlette<0.47.0,>=0.40.0->fastapi->cudaq-solvers) (4.9.0)
+Requirement already satisfied: exceptiongroup>=1.0.2 in /usr/local/lib/python3.10/dist-packages (from anyio<5,>=3.6.2->starlette<0.47.0,>=0.40.0->fastapi->cudaq-solvers) (1.3.0)
+Requirement already satisfied: sniffio>=1.1 in /usr/local/lib/python3.10/dist-packages (from anyio<5,>=3.6.2->starlette<0.47.0,>=0.40.0->fastapi->cudaq-solvers) (1.3.1)
+Collecting h5py>=2.7 (from pyscf->cudaq-solvers)
+  Downloading h5py-3.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.7 kB)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from pyscf->cudaq-solvers) (59.6.0)
+Collecting click>=7.0 (from uvicorn->cudaq-solvers)
+  Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: h11>=0.8 in /usr/local/lib/python3.10/dist-packages (from uvicorn->cudaq-solvers) (0.16.0)
+Downloading cudaq_qec-0.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 94.8 MB/s eta 0:00:00
+Downloading cudaq_solvers-0.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 160.6 MB/s eta 0:00:00
+Downloading cuda_quantum_cu12-0.11.0-cp310-cp310-manylinux_2_28_x86_64.whl (124.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.6/124.6 MB 120.7 MB/s eta 0:00:00
+Downloading astpretty-3.0.0-py2.py3-none-any.whl (4.9 kB)
+Downloading nvidia_cublas_cu12-12.9.1.4-py3-none-manylinux_2_27_x86_64.whl (581.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 581.2/581.2 MB 227.4 MB/s eta 0:00:00
+Downloading nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (89.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.6/89.6 MB 247.1 MB/s eta 0:00:00
+Downloading nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 152.8 MB/s eta 0:00:00
+Downloading nvidia_curand_cu12-10.3.10.19-py3-none-manylinux_2_27_x86_64.whl (68.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.3/68.3 MB 253.9 MB/s eta 0:00:00
+Downloading nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl (338.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 338.1/338.1 MB 244.3 MB/s eta 0:00:00
+Downloading fastapi-0.116.0-py3-none-any.whl (95 kB)
+Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+Downloading pydantic_core-2.33.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 195.4 MB/s eta 0:00:00
+Downloading starlette-0.46.2-py3-none-any.whl (72 kB)
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 177.8 MB/s eta 0:00:00
+Downloading nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (366.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 366.5/366.5 MB 222.9 MB/s eta 0:00:00
+Downloading nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.7/39.7 MB 233.2 MB/s eta 0:00:00
+Downloading pyscf-2.9.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (50.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 MB 230.4 MB/s eta 0:00:00
+Downloading h5py-3.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 184.3 MB/s eta 0:00:00
+Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+Downloading click-8.2.1-py3-none-any.whl (102 kB)
+Installing collected packages: typing-inspection, pydantic-core, nvidia-nvjitlink-cu12, nvidia-curand-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cublas-cu12, networkx, h5py, click, astpretty, annotated-types, uvicorn, pyscf, pydantic, nvidia-cusparse-cu12, starlette, nvidia-cusolver-cu12, fastapi, cuda-quantum-cu12, cudaq-solvers, cudaq-qec
+
+Successfully installed annotated-types-0.7.0 astpretty-3.0.0 click-8.2.1 cuda-quantum-cu12-0.11.0 cudaq-qec-0.3.0 cudaq-solvers-0.3.0 fastapi-0.116.0 h5py-3.14.0 networkx-3.4.2 nvidia-cublas-cu12-12.9.1.4 nvidia-cuda-nvrtc-cu12-12.9.86 nvidia-cuda-runtime-cu12-12.9.79 nvidia-curand-cu12-10.3.10.19 nvidia-cusolver-cu12-11.7.5.82 nvidia-cusparse-cu12-12.5.10.65 nvidia-nvjitlink-cu12-12.9.86 pydantic-2.11.7 pydantic-core-2.33.2 pyscf-2.9.0 starlette-0.46.2 typing-inspection-0.4.1 uvicorn-0.35.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install ase
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting ase
+  Downloading ase-3.25.0-py3-none-any.whl.metadata (4.2 kB)
+Requirement already satisfied: numpy>=1.19.5 in /usr/local/lib/python3.10/dist-packages (from ase) (1.26.4)
+Requirement already satisfied: scipy>=1.6.0 in /usr/local/lib/python3.10/dist-packages (from ase) (1.12.0)
+Requirement already satisfied: matplotlib>=3.3.4 in /usr/local/lib/python3.10/dist-packages (from ase) (3.10.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.3.4->ase) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.3.4->ase) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.3.4->ase) (4.58.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.3.4->ase) (1.4.8)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.3.4->ase) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.3.4->ase) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.3.4->ase) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib>=3.3.4->ase) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7->matplotlib>=3.3.4->ase) (1.17.0)
+Downloading ase-3.25.0-py3-none-any.whl (3.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 98.9 MB/s eta 0:00:00
+Installing collected packages: ase
+Successfully installed ase-3.25.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install pyscf
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Requirement already satisfied: pyscf in /usr/local/lib/python3.10/dist-packages (2.9.0)
+Requirement already satisfied: numpy!=1.16,!=1.17,>=1.13 in /usr/local/lib/python3.10/dist-packages (from pyscf) (1.26.4)
+Requirement already satisfied: scipy>=1.6.0 in /usr/local/lib/python3.10/dist-packages (from pyscf) (1.12.0)
+Requirement already satisfied: h5py>=2.7 in /usr/local/lib/python3.10/dist-packages (from pyscf) (3.14.0)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from pyscf) (59.6.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install contfrac
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting contfrac
+  Downloading ContFrac-1.0.0-py3-none-any.whl.metadata (3.3 kB)
+Downloading ContFrac-1.0.0-py3-none-any.whl (5.8 kB)
+Installing collected packages: contfrac
+Successfully installed contfrac-1.0.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install ipython
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Requirement already satisfied: ipython in /usr/local/lib/python3.10/dist-packages (8.36.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython) (5.2.1)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from ipython) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in /usr/local/lib/python3.10/dist-packages (from ipython) (0.19.2)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython) (0.1.7)
+Requirement already satisfied: pexpect>4.3 in /usr/local/lib/python3.10/dist-packages (from ipython) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /usr/local/lib/python3.10/dist-packages (from ipython) (3.0.51)
+Requirement already satisfied: pygments>=2.4.0 in /usr/local/lib/python3.10/dist-packages (from ipython) (2.19.1)
+Requirement already satisfied: stack_data in /usr/local/lib/python3.10/dist-packages (from ipython) (0.6.3)
+Requirement already satisfied: traitlets>=5.13.0 in /usr/local/lib/python3.10/dist-packages (from ipython) (5.14.3)
+Requirement already satisfied: typing_extensions>=4.6 in /usr/local/lib/python3.10/dist-packages (from ipython) (4.13.2)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython) (0.2.13)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in /usr/local/lib/python3.10/dist-packages (from jedi>=0.16->ipython) (0.8.4)
+Requirement already satisfied: ptyprocess>=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect>4.3->ipython) (0.7.0)
+Requirement already satisfied: executing>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython) (2.2.0)
+Requirement already satisfied: asttokens>=2.1.0 in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython) (3.0.0)
+Requirement already satisfied: pure-eval in /usr/local/lib/python3.10/dist-packages (from stack_data->ipython) (0.2.3)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install matplotlib
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.10.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (4.58.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.4.8)
+Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.26.4)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install openfermion
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting openfermion
+  Downloading openfermion-1.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting cirq-core>=1.4.1 (from openfermion)
+  Downloading cirq_core-1.5.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting deprecation (from openfermion)
+  Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: h5py>=3.10.0 in /usr/local/lib/python3.10/dist-packages (from openfermion) (3.14.0)
+Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from openfermion) (3.4.2)
+Requirement already satisfied: numpy>=1.26 in /usr/local/lib/python3.10/dist-packages (from openfermion) (1.26.4)
+Collecting pubchempy (from openfermion)
+  Downloading PubChemPy-1.0.4.tar.gz (29 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: requests~=2.32.2 in /usr/local/lib/python3.10/dist-packages (from openfermion) (2.32.3)
+Collecting scipy~=1.15 (from openfermion)
+  Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting sympy (from openfermion)
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion) (2025.4.26)
+Requirement already satisfied: attrs>=21.3.0 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion) (25.3.0)
+Collecting duet>=0.2.8 (from cirq-core>=1.4.1->openfermion)
+  Downloading duet-0.2.9-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: matplotlib~=3.7 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion) (3.10.3)
+Collecting pandas~=2.0 (from cirq-core>=1.4.1->openfermion)
+  Downloading pandas-2.3.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+Collecting sortedcontainers~=2.0 (from cirq-core>=1.4.1->openfermion)
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: typing_extensions>=4.2 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion) (4.13.2)
+Collecting tqdm>=4.12 (from cirq-core>=1.4.1->openfermion)
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (4.58.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (1.4.8)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (2.9.0.post0)
+Collecting pytz>=2020.1 (from pandas~=2.0->cirq-core>=1.4.1->openfermion)
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas~=2.0->cirq-core>=1.4.1->openfermion)
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7->matplotlib~=3.7->cirq-core>=1.4.1->openfermion) (1.17.0)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->openfermion)
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Downloading openfermion-1.7.1-py3-none-any.whl (44.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.7/44.7 MB 229.5 MB/s eta 0:00:00
+Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 277.4 MB/s eta 0:00:00
+Downloading cirq_core-1.5.0-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 234.1 MB/s eta 0:00:00
+Downloading pandas-2.3.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 219.5 MB/s eta 0:00:00
+Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Downloading duet-0.2.9-py3-none-any.whl (29 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 217.7 MB/s eta 0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 331.6 MB/s eta 0:00:00
+Building wheels for collected packages: pubchempy
+  DEPRECATION: Building 'pubchempy' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'pubchempy'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+  Building wheel for pubchempy (setup.py): started
+  Building wheel for pubchempy (setup.py): finished with status 'done'
+  Created wheel for pubchempy: filename=PubChemPy-1.0.4-py3-none-any.whl size=13834 sha256=0e506653f36b84e93760e6f935ed67ed03ab79fed400f41105fcae4bdecd32f8
+  Stored in directory: /tmp/pip-ephem-wheel-cache-nprugtwk/wheels/90/7c/45/18a0671e3c3316966ef7ed9ad2b3f3300a7e41d3421a44e799
+Successfully built pubchempy
+Installing collected packages: sortedcontainers, pytz, pubchempy, mpmath, tzdata, tqdm, sympy, scipy, duet, deprecation, pandas, cirq-core, openfermion
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.12.0
+    Uninstalling scipy-1.12.0:
+      Successfully uninstalled scipy-1.12.0
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+qutip 4.7.6 requires scipy<1.13.0,>=1.0, but you have scipy 1.15.3 which is incompatible.
+Successfully installed cirq-core-1.5.0 deprecation-2.1.0 duet-0.2.9 mpmath-1.3.0 openfermion-1.7.1 pandas-2.3.1 pubchempy-1.0.4 pytz-2025.2 scipy-1.15.3 sortedcontainers-2.4.0 sympy-1.14.0 tqdm-4.67.1 tzdata-2025.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ pip3 install openfermionpyscf
+WARNING: The directory '/jet/home/nnepal/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting openfermionpyscf
+  Downloading openfermionpyscf-0.5-py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: openfermion>=0.5 in /usr/local/lib/python3.10/dist-packages (from openfermionpyscf) (1.7.1)
+Requirement already satisfied: pyscf in /usr/local/lib/python3.10/dist-packages (from openfermionpyscf) (2.9.0)
+Collecting pytest (from openfermionpyscf)
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Requirement already satisfied: cirq-core>=1.4.1 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.5.0)
+Requirement already satisfied: deprecation in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (2.1.0)
+Requirement already satisfied: h5py>=3.10.0 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (3.14.0)
+Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (3.4.2)
+Requirement already satisfied: numpy>=1.26 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.26.4)
+Requirement already satisfied: pubchempy in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.0.4)
+Requirement already satisfied: requests~=2.32.2 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (2.32.3)
+Requirement already satisfied: scipy~=1.15 in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.15.3)
+Requirement already satisfied: sympy in /usr/local/lib/python3.10/dist-packages (from openfermion>=0.5->openfermionpyscf) (1.14.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion>=0.5->openfermionpyscf) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion>=0.5->openfermionpyscf) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion>=0.5->openfermionpyscf) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests~=2.32.2->openfermion>=0.5->openfermionpyscf) (2025.4.26)
+Requirement already satisfied: attrs>=21.3.0 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (25.3.0)
+Requirement already satisfied: duet>=0.2.8 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (0.2.9)
+Requirement already satisfied: matplotlib~=3.7 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (3.10.3)
+Requirement already satisfied: pandas~=2.0 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (2.3.1)
+Requirement already satisfied: sortedcontainers~=2.0 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (2.4.0)
+Requirement already satisfied: typing_extensions>=4.2 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (4.13.2)
+Requirement already satisfied: tqdm>=4.12 in /usr/local/lib/python3.10/dist-packages (from cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (4.67.1)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (4.58.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (1.4.8)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (25.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas~=2.0->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas~=2.0->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (2025.2)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7->matplotlib~=3.7->cirq-core>=1.4.1->openfermion>=0.5->openfermionpyscf) (1.17.0)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from pyscf->openfermionpyscf) (59.6.0)
+Requirement already satisfied: exceptiongroup>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->openfermionpyscf) (1.3.0)
+Collecting iniconfig>=1 (from pytest->openfermionpyscf)
+  Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting pluggy<2,>=1.5 (from pytest->openfermionpyscf)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.10/dist-packages (from pytest->openfermionpyscf) (2.19.1)
+Requirement already satisfied: tomli>=1 in /usr/local/lib/python3.10/dist-packages (from pytest->openfermionpyscf) (2.2.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy->openfermion>=0.5->openfermionpyscf) (1.3.0)
+Downloading openfermionpyscf-0.5-py3-none-any.whl (16 kB)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Installing collected packages: pluggy, iniconfig, pytest, openfermionpyscf
+
+Successfully installed iniconfig-2.1.0 openfermionpyscf-0.5 pluggy-1.6.0 pytest-8.4.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+INFO:    Adding runscript
+INFO:    Creating SIF file...
+INFO:    Build complete: cuda-qx.sif

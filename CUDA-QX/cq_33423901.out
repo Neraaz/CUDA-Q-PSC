@@ -1,0 +1,11 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/CUDA-QX/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/CUDA-QX/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/CUDA-QX/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/CUDA-QX/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/CUDA-QX/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --nv --no-home /jet/home/nnepal/tests/cudaq_test/CUDA-QX/cuda-qx.sif python3 vqe.py
+Final <H> = -1.1370217422533062

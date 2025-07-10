@@ -1,0 +1,11 @@
++ export SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/IQM/singularity_cache
++ SINGULARITY_CACHEDIR=/ocean/projects/pscstaff/nnepal/cudaq_practice/IQM/singularity_cache
++ export OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/IQM/openfermion_data
++ OPENFERMION_DATA_DIRECTORY=/ocean/projects/pscstaff/nnepal/cudaq_practice/IQM/openfermion_data
++ mkdir -p /ocean/projects/pscstaff/nnepal/cudaq_practice/IQM/openfermion_data
++ export OMPI_MCA_opal_cuda_support=true
++ OMPI_MCA_opal_cuda_support=true
++ export 'OMPI_MCA_btl=^openib'
++ OMPI_MCA_btl='^openib'
++ singularity exec --cleanenv --nv --no-home --bind /ocean/projects/pscstaff/nnepal/cudaq_practice/IQM/openfermion_data:/usr/local/lib/python3.10/dist-packages/openfermion/testing/data /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif python3 iqm_vqe.py
+FATAL:   While checking container encryption: could not open image /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif: failed to retrieve path for /jet/home/nnepal/tests/cudaq_test/GHTEST_1/cuda-quantum.sif: lstat /ocean/projects/pscstaff/nnepal/cudaq_practice/GHTEST_1: no such file or directory
