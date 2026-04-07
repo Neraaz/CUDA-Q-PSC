@@ -1,19 +1,17 @@
 import openfermion
 import openfermionpyscf
 from openfermion.transforms import jordan_wigner, get_fermion_operator
-
 import os
 import timeit
-
 import cudaq
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize
 import numpy as np
 import sys
 
-def vqe(elem1,elem2,d):
-    cudaq.set_target('qpp-cpu')
-    geometry = [(elem1, (0, 0, 0)), (elem2, (0, 0, d))]
+def vqe():
+    geometry = [('O', (0.1173, 0.0, 0.0)), ('H', (-0.4691, 0.7570, 0.0)),
+            ('H', (-0.4691, -0.7570, 0.0))]
     basis = 'sto3g'
     multiplicity = 1
     charge = 0
@@ -43,7 +41,6 @@ def vqe(elem1,elem2,d):
     
     parameter_count = cudaq.kernels.uccsd_num_parameters(electron_count,
                                                          qubit_count)
-    
     print(f"electrons: {electron_count}, qubit count: {qubit_count}, parameters: {parameter_count}")
     
     def cost(theta):
@@ -56,11 +53,9 @@ def vqe(elem1,elem2,d):
     
     exp_vals = []
     
-    counter = {'n': 0}
     def callback(xk):
-        exp_vals.append(cost(xk))
-        counter['n'] += 1
-        print(f"Iteration {counter['n']}: x = {xk}:{cost(xk)}", flush=True)
+        energy = cost(xk)
+        exp_vals.append(energy)
     
     # Initial variational parameters.
     np.random.seed(42)
@@ -71,21 +66,19 @@ def vqe(elem1,elem2,d):
                       x0,
                       method='COBYLA',
                       callback=callback,
-                      tol=1e-08,
-                      options={'maxiter': 10000})
+                      tol=0.000001,
+                      options={'maxiter': 500})
     end_time = timeit.default_timer()
     total_time = end_time - start_time
+    print(f"Epochs: {len(exp_vals)}, time={total_time}")
     plt.plot(exp_vals)
-    print(f"Epochs: {len(exp_vals)}")
-    plt.xlabel('Epochs')
+    plt.xlabel('Steps')
     plt.ylabel('Energy')
     plt.title('VQE')
-    plt.savefig(f"vqe-{d}.png")
-    return d,min(exp_vals),total_time
+    plt.savefig("vqe.png")
+    return min(exp_vals),total_time
 if __name__ == "__main__":
-    elem1 = "H"
-    elem2 = "H"
-    distance = 0.7474
-    d,e0,time=vqe(elem1,elem2,distance)
+    cudaq.set_target('nvidia')
+    e0,time=vqe()
     with open(f"result.csv", "w") as write_csv:
-        write_csv.write(str(d) + "," + str(e0) + "," + str(time) + "\n")
+        write_csv.write(str(e0) + "," + str(time) + "\n")

@@ -11,4 +11,4 @@
 #cd $SLURM_SUBMIT_DIR
 
 
-singularity build --fakeroot cuda-quantum.sif cuda-quantum.def
+apptainer build --fakeroot cuda-quantum.sif cuda-quantum.def

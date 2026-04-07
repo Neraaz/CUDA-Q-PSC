@@ -1,20 +1,25 @@
 Bootstrap: docker
-From: nvcr.io/nvidia/nightly/cuda-quantum:cu12-latest
+From: nvcr.io/nvidia/quantum/cuda-quantum:cu12-0.14.0
 
 %post
     # Install system dependencies
-    apt-get update && apt-get install -y python3-pip git
+    apt-get update && apt-get install -y python3-pip git ca-certificates
 
     # Upgrade pip
-    pip3 install --upgrade pip
+    #pip3 install --upgrade pip
 
     # Install Python packages
+    pip3 install ase
     pip3 install pyscf
     pip3 install contfrac
     pip3 install ipython
     pip3 install matplotlib
     pip3 install openfermion
     pip3 install openfermionpyscf
+    pip3 install matplotlib==3.8.4 torch==2.9.1+cu126 torchvision==0.24.1+cu126 scikit-learn==1.4.2 \
+     -q --extra-index-url https://download.pytorch.org/whl/cu126
+    pip3 install --no-compile genQC==0.2.5 -q
+    pip3 install numba==0.60.0 -q
 
 
 %runscript
