@@ -1,31 +1,49 @@
 Bootstrap: docker
 From: nvcr.io/nvidia/quantum/cuda-quantum:cu12-0.14.0
 
+%environment
+    export PYTHONNOUSERSITE=1
+
 %post
-    # Install system dependencies
+    set -e
+    export DEBIAN_FRONTEND=noninteractive
+    export PIP_NO_CACHE_DIR=1          # avoids the ~/.cache/pip permission warnings
+
+    # System dependencies
     apt-get update && apt-get install -y python3-pip git ca-certificates libgfortran5
+    rm -rf /var/lib/apt/lists/*
 
-    # Upgrade pip
-    #pip3 install --upgrade pip
-
-    # Install Python packages
-    pip3 install ase
-    pip3 install pyscf
-    pip3 install contfrac
-    pip3 install ipython
-    pip3 install matplotlib
-    pip3 install openfermion
-    pip3 install openfermionpyscf
+    # Python packages
+    pip3 install ase pyscf contfrac ipython matplotlib openfermion openfermionpyscf
     pip3 install matplotlib==3.8.4 torch==2.9.1+cu126 torchvision==0.24.1+cu126 scikit-learn==1.4.2 \
-     -q --extra-index-url https://download.pytorch.org/whl/cu126
+        -q --extra-index-url https://download.pytorch.org/whl/cu126
     pip3 install --no-compile genQC==0.2.5 -q
     pip3 install numba==0.60.0 -q
-    pip3 install cudaq-solvers
-    pip3 install cudaq-qec
 
+    # ---- CUDA-Q add-ons (keep this block last) ----------------------------
+    # cudaq-qec 0.7.0 / cudaq-solvers 0.6.0 need CUDA-Q 0.15.x, so they cannot
+    # go on a 0.14 image. Instead, pin cuda-quantum-cu12 to the exact version
+    # already in the base image and let pip pick the newest solvers/qec
+    # releases that are built for it.
+    CUDAQ_VER=$(python3 -s -c "import re, cudaq; print(re.search(r'(\d+\.\d+\.\d+)', cudaq.__version__).group(1))")
+    echo "Base image CUDA-Q version: ${CUDAQ_VER}"
+    echo "cuda-quantum-cu12==${CUDAQ_VER}" > /tmp/cudaq-constraint.txt
+    pip3 install -c /tmp/cudaq-constraint.txt \
+        "cuda-quantum-cu12==${CUDAQ_VER}" cudaq-solvers-cu12 cudaq-qec-cu12
+    rm -f /tmp/cudaq-constraint.txt
+    pip3 list 2>/dev/null | grep -i -E "cuda-quantum|cudaq"
+
+    # Fail the build right away if the CUDA-Q packages do not load together
+    python3 -s -c "import cudaq, cudaq_solvers, cudaq_qec; print('CUDA-Q OK:', cudaq.__version__)"
+
+%test
+    # Drop Slurm/MPI variables inherited from the host job, otherwise
+    # CUDA-Q  MPI plugin tries to init OpenMPI via Slurm PMI and aborts.
+    for v in $(env | grep -E '^(SLURM|PMI|PMIX|OMPI)_' | cut -d= -f1); do unset "$v"; done
+    export MPLCONFIGDIR=/tmp/mpl-$$
+    python3 -s -c "import cudaq, cudaq_solvers, cudaq_qec; print('CUDA-Q OK:', cudaq.__version__)"
 
 %runscript
-    mount devpts /dev/pts -t devpts
-    cp -r /home/cudaq/* .
-    bash
-
+    mount devpts /dev/pts -t devpts 2>/dev/null || true
+    cp -r /home/cudaq/* . 2>/dev/null || true
+    exec bash "$@"
