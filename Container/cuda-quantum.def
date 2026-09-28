@@ -3,7 +3,7 @@ From: nvcr.io/nvidia/quantum/cuda-quantum:cu12-0.14.0
 
 %post
     # Install system dependencies
-    apt-get update && apt-get install -y python3-pip git ca-certificates
+    apt-get update && apt-get install -y python3-pip git ca-certificates libgfortran5
 
     # Upgrade pip
     #pip3 install --upgrade pip
@@ -20,6 +20,8 @@ From: nvcr.io/nvidia/quantum/cuda-quantum:cu12-0.14.0
      -q --extra-index-url https://download.pytorch.org/whl/cu126
     pip3 install --no-compile genQC==0.2.5 -q
     pip3 install numba==0.60.0 -q
+    pip3 install cudaq-solvers
+    pip3 install cudaq-qec
 
 
 %runscript
