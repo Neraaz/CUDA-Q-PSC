@@ -1,0 +1,16 @@
+# Images
+*.png
+
+# Any file or folder with "out" in its name (e.g. job.out, output.txt, slurm-123.out, out/)
+*out*
+*.csv
+
+# Data folders, at any depth
+data/
+
+# Apptainer / Singularity images
+*.sif
+
+# Optional: keep specific PNGs that notebooks need, e.g. images in _static/
+# !_static/*.png
+openfermion_data/*

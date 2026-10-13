@@ -1,4 +1,6 @@
 # Import the relevant libraries
+import sys
+sys.modules["triton"] = None
 
 import cudaq
 from cudaq import spin

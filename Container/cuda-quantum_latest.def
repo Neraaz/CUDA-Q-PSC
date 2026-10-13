@@ -1,0 +1,34 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/quantum/cuda-quantum@sha256:9ad01f82b2286f1ea5916a961e2b54d1f68a767918ba8cd12e86838c862a9414 #ARM
+#From: nvcr.io/nvidia/quantum/cuda-quantum:cu13-0.16.0 #For X86_64
+
+%environment
+    export PYTHONNOUSERSITE=1
+
+%post
+    set -e
+    export DEBIAN_FRONTEND=noninteractive
+    export PIP_NO_CACHE_DIR=1
+
+    # System dependencies
+    apt-get update && apt-get install -y python3-pip git ca-certificates libgfortran5
+    rm -rf /var/lib/apt/lists/*
+
+    # Python packages
+    pip3 install ase pyscf contfrac ipython matplotlib openfermion openfermionpyscf scikit-learn
+    pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu132
+    pip3 uninstall -y triton              # not needed; its LLVM clashes with CUDA-Q's (the earlier segfault)
+
+    # cudaq-algorithms is pure Python: don't let pip pull in a second, older CUDA-Q
+    pip3 install --no-deps cudaq-algorithms
+
+    # Fail the build if anything doesn't load together
+    python3 -s -c "import cudaq, cudaq_algorithms, torch, torchvision; print('OK', cudaq.__version__, cudaq.__file__)"
+
+%test
+    python3 -s -c "import cudaq, cudaq_algorithms, torch, torchvision; print('OK', cudaq.__version__, cudaq.__file__)"
+
+%runscript
+    mount devpts /dev/pts -t devpts 2>/dev/null || true
+    cp -r /home/cudaq/* . 2>/dev/null || true
+    exec bash "$@"

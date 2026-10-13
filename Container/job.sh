@@ -17,6 +17,6 @@ apptainer exec --cleanenv --nv --no-home cuda-quantum.sif python ghz_H.py > ghz_
 apptainer exec --cleanenv --nv --no-home cuda-quantum.sif python maxcut.py > maxcutout
 apptainer exec --cleanenv --nv --no-home cuda-quantum.sif python ghz.py > ghzout
 ##Downloading MNIST data
-python mnist_data.py
+apptainer exec --cleanenv --no-home cuda-quantum.sif python mnist_data.py
 apptainer exec --cleanenv --nv --no-home cuda-quantum.sif python ml.py
 apptainer exec --cleanenv --nv --no-home --bind $PWD/openfermion_data:/usr/local/lib/python3.12/dist-packages/openfermion/testing/data cuda-quantum.sif python vqe.py > vqeout
